@@ -11,22 +11,18 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
 }
 
 /* Main Container */
 section {
     background-color: white;
     padding: 2rem;
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: left;
-    margin-top: 30px;
+    margin: 20px auto; /* Add spacing between sections */
 }
 
 /* Header */
@@ -35,7 +31,7 @@ header {
     color: white;
     padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -56,23 +52,19 @@ h2 {
 
 /* List Items */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: disc;
+    padding-left: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 ul li {
-    background-color: #e7f7e7;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 5px;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
 }
 
 /* Use Cases */
 .use-cases {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: block; /* Ensure all use cases stack vertically */
 }
 
 .case {
@@ -80,6 +72,7 @@ ul li {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; /* Add spacing between use cases */
 }
 
 .case h3 {
@@ -89,11 +82,4 @@ ul li {
 
 .case p {
     color: #555;
-}
-
-/* Responsive Design */
-@media (min-width: 600px) {
-    .use-cases {
-        grid-template-columns: 1fr 1fr;
-    }
 }
