@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Use Cases and Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Business Use Cases and Algorithms</h1>
+        <p>Explore the implementation of sorting and graph algorithms in real-world business scenarios.</p>
+    </header>
+
+    <section>
+        <h2>📊 Sorting Orders (Bubble Sort)</h2>
+        <p><strong>Business Use Case:</strong> In a <strong>Food Delivery Service</strong>, sorting algorithms like Bubble Sort can be used to prioritize delivery orders based on the distance between the restaurant and the delivery address. This ensures that orders closest to the restaurant are delivered first, leading to faster and more efficient service.</p>
+
+        <div class="code-section bubble-sort">
+            <h3>Bubble Sort Code</h3>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+void bubbleSort(vector&lt;int&gt;& arr) {
+    int n = arr.size();
+    bool swapped;
+    do {
+        swapped = false;
+        for (int i = 0; i &lt; n - 1; i++) {
+            if (arr[i] &gt; arr[i + 1]) {
+                swap(arr[i], arr[i + 1]);
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+
+int main() {
+    vector&lt;int&gt; orders = {10, 5, 30, 15, 50};
+    bubbleSort(orders);
+
+    cout &lt;&lt; "Sorted Orders by Distance: ";
+    for (int order : orders) {
+        cout &lt;&lt; order &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>🚗 Dijkstra's Algorithm (Finding Shortest Path)</h2>
+        <p><strong>Business Use Case:</strong> Dijkstra's Algorithm can be applied to a <strong>Transport System</strong> to find the shortest route between two locations in the city. This helps public and private transport services determine the fastest path, thus optimizing travel time and improving overall efficiency.</p>
+
+        <div class="code-section dijkstra">
+            <h3>Dijkstra's Algorithm Code</h3>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;climits&gt;
+#include &lt;unordered_map&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+using namespace std;
+
+void dijkstra(unordered_map&lt;char, unordered_map&lt;char, int&gt;&gt;& graph, char startNode) {
+    unordered_map&lt;char, int&gt;& distances;
+    set&lt;pair&lt;int, char&gt;&gt;& nodes;
+    
+    for (const auto& pair : graph) {
+        distances[pair.first] = INT_MAX;
+    }
+    distances[startNode] = 0;
+    nodes.insert({0, startNode});
+
+    while (!nodes.empty()) {
+        auto node = *nodes.begin();
+        nodes.erase(nodes.begin());
+
+        char currentNode = node.second;
+        int currentDistance = node.first;
+
+        for (const auto& neighbor : graph[currentNode]) {
+            int newDist = currentDistance + neighbor.second;
+            if (newDist &lt; distances[neighbor.first]) {
+                nodes.erase({distances[neighbor.first], neighbor.first});
+                distances[neighbor.first] = newDist;
+                nodes.insert({newDist, neighbor.first});
+            }
+        }
+    }
+
+    cout &lt;&lt; "Shortest path distances from " &lt;&lt; startNode &lt;&lt; ":" &lt;&lt; endl;
+    for (const auto& pair : distances) {
+        cout &lt;&lt; pair.first &lt;&lt; ": " &lt;&lt; pair.second &lt;&lt; endl;
+    }
+}
+
+int main() {
+    unordered_map&lt;char, unordered_map&lt;char, int&gt;&gt;& graph = {
+        {'A', {{'B', 1}, {'C', 4}}},
+        {'B', {{'A', 1}, {'C', 2}, {'D', 5}}},
+        {'C', {{'A', 4}, {'B', 2}, {'D', 1}}},
+        {'D', {{'C', 1}, {'B', 5}}}
+    };
+    
+    dijkstra(graph, 'A');
+    return 0;
+}
+            </code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>🔗 Kruskal's Algorithm (Minimum Spanning Tree)</h2>
+        <p><strong>Business Use Case:</strong> Kruskal's Algorithm is ideal for setting up <strong>EV Charging Stations</strong> in the city. It can be used to determine the optimal locations for charging stations by connecting the locations in a way that minimizes total distance or cost. This approach minimizes infrastructure investment while covering the most important locations.</p>
+
+        <div class="code-section kruskal">
+            <h3>Kruskal's Algorithm Code</h3>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+struct Edge {
+    int src, dest, weight;
+    bool operator<(const Edge& e) {
+        return weight &lt; e.weight;
+    }
+};
+
+int findParent(int node, vector&lt;int&gt;& parent) {
+    if (parent[node] == node)
+        return node;
+    return parent[node] = findParent(parent[node], parent);
+}
+
+void kruskal(int n, vector&lt;Edge&gt;& edges) {
+    sort(edges.begin(), edges.end());
+    vector&lt;int&gt; parent(n);
+    for (int i = 0; i &lt; n; ++i)
+        parent[i] = i;
+    
+    vector&lt;Edge&gt; mst;
+
+    for (const auto& edge : edges) {
+        int srcParent = findParent(edge.src, parent);
+        int destParent = findParent(edge.dest, parent);
+
+        if (srcParent != destParent) {
+            mst.push_back(edge);
+            parent[srcParent] = destParent;
+        }
+    }
+
+    cout &lt;&lt; "Edges in Minimum Spanning Tree:" &lt;&lt; endl;
+    for (const auto& edge : mst) {
+        cout &lt;&lt; edge.src &lt;&lt; " -- " &lt;&lt; edge.dest &lt;&lt; " : " &lt;&lt; edge.weight &lt;&lt; endl;
+    }
+}
+
+int main() {
+    vector&lt;Edge&gt; edges = {
+        {0, 1, 10}, {0, 2, 6}, {0, 3, 5},
+        {1, 3, 15}, {2, 3, 4}
+    };
+    
+    int n = 4;  // Number of nodes
+    kruskal(n, edges);
+    return 0;
+}
+            </code></pre>
+        </div>
+    </section>
+
+</body>
+</html>
