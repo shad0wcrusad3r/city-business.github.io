@@ -69,3 +69,38 @@ nav a {
 nav a:hover {
     background-color: #c3ebc3;
 }
+
+/* Styling for the 'Implementation of Sorting and Graph Algorithms' section */
+#algorithms-section {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#algorithms-section h2 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#algorithms-section p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.link-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.link-button:hover {
+    background-color: #45a049;
+}
+
