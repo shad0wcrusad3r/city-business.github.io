@@ -77,9 +77,11 @@ nav a:hover {
     border-radius: 8px;
     margin-top: 30px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Adding spacing to ensure the link button doesn't overlap the text */
 #sdgs-info p {
     margin-bottom: 20px;  /* Adding space below each paragraph */
 }
