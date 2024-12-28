@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.team-list li {
+    margin: 10px 0;
+}
+
+.team-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.team-list a:hover {
+    color: #0056b3;
+}
