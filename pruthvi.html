@@ -9,17 +9,18 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #e8f5e9;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #2e7d32;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #388E3C;
             color: white;
             padding: 20px;
             text-align: center;
+            border-bottom: 4px solid #2e7d32;
         }
 
         header h1 {
@@ -33,68 +34,91 @@
 
         section {
             padding: 20px;
-            margin: 20px 0;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
 
-        section h2,
-        section h3 {
+        section h2 {
             font-size: 28px;
             margin-bottom: 10px;
-            color: #333;
+            color: #2e7d32;
+            border-bottom: 2px solid #81c784;
+            padding-bottom: 5px;
+        }
+
+        section h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #43a047;
         }
 
         section p {
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.8;
+            color: #4e342e;
         }
 
         section strong {
             font-weight: bold;
+            color: #1b5e20;
         }
 
         table {
             width: 100%;
             margin-top: 20px;
             border-collapse: collapse;
+            background-color: #fafafa;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         table, th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #bdbdbd;
         }
 
         th, td {
-            padding: 10px;
+            padding: 12px;
             text-align: left;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #c8e6c9;
+            font-weight: bold;
+            color: #2e7d32;
         }
 
         button {
             background-color: #4CAF50;
             color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
             transition: background-color 0.3s ease;
+            margin: 10px 0;
         }
 
         button:hover {
-            background-color: #45a049;
-        }
-
-        button:active {
-            background-color: #3e8e41;
+            background-color: #388E3C;
         }
 
         button:focus {
             outline: none;
+            box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.4);
+        }
+
+        a {
+            color: #1b5e20;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #4caf50;
         }
 
         @media (max-width: 768px) {
@@ -102,9 +126,12 @@
                 font-size: 28px;
             }
 
-            section h2,
-            section h3 {
+            section h2 {
                 font-size: 24px;
+            }
+
+            section h3 {
+                font-size: 20px;
             }
         }
 
@@ -113,9 +140,12 @@
                 font-size: 22px;
             }
 
-            section h2,
-            section h3 {
+            section h2 {
                 font-size: 20px;
+            }
+
+            section h3 {
+                font-size: 18px;
             }
         }
     </style>
@@ -128,88 +158,23 @@
     </header>
 
     <section>
-        <h2>Why We Use Dijkstra's Algorithm</h2>
-        <p>
-            Dijkstra's Algorithm is used to calculate the shortest path between the restaurant and the customer's location, ensuring:
-        </p>
-        <ul>
-            <li>Timely delivery of food.</li>
-            <li>Fuel-efficient routing for delivery agents.</li>
-            <li>Cost-effective operations in urban settings.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Delivery Route Network</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nodes (Locations)</th>
-                    <th>Edge (Road)</th>
-                    <th>Weight (Time)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Restaurant</td>
-                    <td>House 1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Restaurant</td>
-                    <td>House 2</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>House 1</td>
-                    <td>Park</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>House 2</td>
-                    <td>School</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>Park</td>
-                    <td>School</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>School</td>
-                    <td>Office</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Office</td>
-                    <td>House 3</td>
-                    <td>10</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section>
         <h3>Route Optimization</h3>
-        <p>
-            <strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
-            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers.<br>
+        <p><strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
+            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers, ensuring timely delivery and fuel efficiency.<br>
             <strong>Code:</strong>
             <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp', '_blank')">Open Dijkstra's Code</button>
         </p>
 
         <h3>Order Allocation</h3>
-        <p>
-            <strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
-            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes.<br>
+        <p><strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
+            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes and ensuring cost-effective operations.<br>
             <strong>Code:</strong>
             <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp', '_blank')">Open Kruskal's Code</button>
         </p>
 
         <h3>Delivery Route Bottleneck Detection</h3>
-        <p>
-            <strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
-            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components.<br>
+        <p><strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
+            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
             <strong>Code:</strong>
             <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp', '_blank')">Open BFS Code</button>
         </p>
