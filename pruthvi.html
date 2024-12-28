@@ -1,89 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery Service</title>
-    <link rel="pruthviheet" href="pruthvi.css">
+    <title>Food Delivery Service Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Inline CSS for quick custom styling (can be moved to an external file) */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        section h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        section strong {
+            font-weight: bold;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section h2 {
+                font-size: 24px;
+            }
+
+            section h3 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            section h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Food Delivery Service: Product Sorting and Optimization</h1>
+    <header>
+        <h1>Food Delivery Service Algorithms</h1>
+        <p>Explore the algorithms and their use cases for optimizing food delivery services.</p>
+    </header>
 
-        <!-- Sorting Products by Ratings and Prices -->
-        <section>
-            <h2>Sorting Products by Ratings and Prices</h2>
-            <p>This table showcases food delivery products sorted by ratings (highest to lowest) and prices (lowest to highest).</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Category</th>
-                        <th>Price (₹)</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Paneer Butter Masala</td>
-                        <td>Main Course</td>
-                        <td>250</td>
-                        <td>4.8</td>
-                    </tr>
-                    <tr>
-                        <td>Margherita Pizza</td>
-                        <td>Snacks</td>
-                        <td>200</td>
-                        <td>4.5</td>
-                    </tr>
-                    <tr>
-                        <td>Veg Biryani</td>
-                        <td>Main Course</td>
-                        <td>150</td>
-                        <td>4.4</td>
-                    </tr>
-                    <tr>
-                        <td>Cold Coffee</td>
-                        <td>Beverages</td>
-                        <td>120</td>
-                        <td>4.2</td>
-                    </tr>
-                    <tr>
-                        <td>Chocolate Brownie</td>
-                        <td>Desserts</td>
-                        <td>100</td>
-                        <td>4.0</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><strong>Note:</strong> Products are sorted by ratings first, and for products with the same ratings, prices are considered.</p>
-        </section>
+    <!-- Food Delivery Service: Product Sorting and Optimization -->
+    <section>
+        <h2>🍔 Food Delivery Service: Product Sorting and Optimization</h2>
+        <p>This table showcases food delivery products sorted by ratings (highest to lowest) and prices (lowest to highest).</p>
 
-        <!-- Algorithms for Food Delivery Optimization -->
-        <section>
-            <h2>Optimization Algorithms for Food Delivery Service</h2>
-            <p>Food delivery services can implement the following algorithms to improve operations:</p>
-            <ul>
-                <li>
-                    <strong>Dijkstra's Algorithm:</strong> Used to find the shortest path for delivery agents between restaurants and customers, ensuring timely delivery.
-                </li>
-                <li>
-                    <strong>Knapsack Problem:</strong> Optimizes the allocation of orders to delivery agents based on their capacity (e.g., the number of items or distance).
-                </li>
-                <li>
-                    <strong>K-Means Clustering:</strong> Groups customers into regions or clusters for efficient route planning.
-                </li>
-                <li>
-                    <strong>Sorting Algorithms:</strong> Helps prioritize deliveries based on urgency (e.g., ratings or time-sensitive orders).
-                </li>
-                <li>
-                    <strong>Greedy Algorithm:</strong> Selects the nearest delivery location for an agent to reduce overall time and fuel consumption.
-                </li>
-                <li>
-                    <strong>Breadth-First Search (BFS):</strong> Traverses the network of delivery routes to detect bottlenecks or optimize connectivity.
-                </li>
-            </ul>
-        </section>
-    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price (₹)</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Paneer Butter Masala</td>
+                    <td>Main Course</td>
+                    <td>250</td>
+                    <td>4.8</td>
+                </tr>
+                <tr>
+                    <td>Margherita Pizza</td>
+                    <td>Snacks</td>
+                    <td>200</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>Veg Biryani</td>
+                    <td>Main Course</td>
+                    <td>150</td>
+                    <td>4.4</td>
+                </tr>
+                <tr>
+                    <td>Cold Coffee</td>
+                    <td>Beverages</td>
+                    <td>120</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>Chocolate Brownie</td>
+                    <td>Desserts</td>
+                    <td>100</td>
+                    <td>4.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Food Delivery System Algorithms -->
+    <section>
+        <h2>🍔 Food Delivery System Algorithms</h2>
+
+        <h3>Route Optimization</h3>
+        <p><strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
+            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers, ensuring timely delivery and fuel efficiency.<br>
+            <strong>Code:</strong> DIJKSTRA'S CODE
+        </p>
+
+        <h3>Order Allocation</h3>
+        <p><strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
+            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes and ensuring cost-effective operations.<br>
+            <strong>Code:</strong> KRUSKAL'S CODE
+        </p>
+
+        <h3>Delivery Zone Optimization</h3>
+        <p><strong>Algorithm:</strong> K-Means Clustering<br>
+            <strong>Use Case:</strong> Groups customer locations into clusters to optimize delivery zones, reducing time and maximizing efficiency in high-demand areas.<br>
+            <strong>Code:</strong> K-MEANS CODE
+        </p>
+
+        <h3>Delivery Route Bottleneck Detection</h3>
+        <p><strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
+            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
+            <strong>Code:</strong> BFS CODE
+        </p>
+    </section>
 </body>
+
 </html>
