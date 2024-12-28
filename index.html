@@ -1,151 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team E16 - Homepage</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Inline CSS for quick custom styling (can be moved to an external file) */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 16px;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        section ul {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        section li {
-            margin-left: 20px;
-        }
-
-        /* Dropdown Styling */
-        #teamMemberSelect {
-            font-size: 16px;
-            padding: 8px;
-            margin: 15px 0;
-            width: 100%;
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        .business-cases {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f1f1f1;
-            display: none;
-        }
-
-        .business-cases h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .business-cases ul {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .business-cases li {
-            list-style: disc;
-            margin-left: 20px;
-        }
-
-        .link-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .link-button:hover {
-            background-color: #45a049;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            section h2 {
-                font-size: 24px;
-            }
-
-            #teamMemberSelect {
-                font-size: 14px;
-            }
-
-            .link-button {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 22px;
-            }
-
-            section h2 {
-                font-size: 20px;
-            }
-
-            #teamMemberSelect {
-                font-size: 12px;
-            }
-
-            .link-button {
-                font-size: 12px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -165,7 +25,6 @@
 
     <section>
         <h2>👨‍💻 Team Introduction</h2>
-        <p>We are Team E16, a group of enthusiastic learners applying algorithmic techniques to solve real-world problems in our Design and Analysis of Algorithms course project.</p>
         <ul>
             <li><strong>Prashanth Chiniwal</strong> - Roll No. 525</li>
             <li><strong>Aditya M. Patil</strong> - Roll No. 532</li>
@@ -256,7 +115,7 @@
         </div>
     </section>
 
- <script>
+    <script>
         document.getElementById('teamMemberSelect').addEventListener('change', function() {
             var selectedMember = this.value;
             var businessCasesDiv = document.getElementById('businessCases');
@@ -302,5 +161,4 @@
         });
     </script>
 </body>
-
 </html>
