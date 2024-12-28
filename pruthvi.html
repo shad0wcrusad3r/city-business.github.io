@@ -9,18 +9,17 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e8f5e9;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #2e7d32;
+            color: #333;
         }
 
         header {
-            background-color: #388E3C;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
             text-align: center;
-            border-bottom: 4px solid #2e7d32;
         }
 
         header h1 {
@@ -34,39 +33,74 @@
 
         section {
             padding: 20px;
-            margin: 20px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        section h2,
         section h3 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 10px;
-            color: #43a047;
+            color: #333;
         }
 
         section p {
             font-size: 16px;
-            line-height: 1.8;
-            color: #4e342e;
+            line-height: 1.6;
         }
 
-        a.link-button {
+        section strong {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
             background-color: #4CAF50;
             color: white;
-            font-size: 16px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 8px;
+            border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
+            font-size: 16px;
             transition: background-color 0.3s ease;
+            margin-left: 10px;
         }
 
-        a.link-button:hover {
-            background-color: #388E3C;
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
         }
 
         @media (max-width: 768px) {
@@ -74,6 +108,18 @@
                 font-size: 28px;
             }
 
+            section h2,
+            section h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            section h2,
             section h3 {
                 font-size: 20px;
             }
@@ -88,28 +134,99 @@
     </header>
 
     <section>
+        <h2>Why We Use Dijkstra's Algorithm</h2>
+        <p>
+            Dijkstra's Algorithm is used to calculate the shortest path between the restaurant and the customer's location, ensuring:
+        </p>
+        <ul>
+            <li>Timely delivery of food.</li>
+            <li>Fuel-efficient routing for delivery agents.</li>
+            <li>Cost-effective operations in urban settings.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Delivery Route Network</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Road)</th>
+                    <th>Weight (Time)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Restaurant</td>
+                    <td>House 1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Restaurant</td>
+                    <td>House 2</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>House 1</td>
+                    <td>Park</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>House 2</td>
+                    <td>School</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Park</td>
+                    <td>School</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>Office</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Office</td>
+                    <td>House 3</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
         <h3>Route Optimization</h3>
         <p>
             <strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
-            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers, ensuring timely delivery and fuel efficiency.<br>
-            <strong>Code:</strong> 
-            <a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp" target="_blank" class="link-button">Open Dijkstra's Code</a>
+            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers.<br>
+            <strong>Code:</strong>
+            <div class="button-container">
+                <a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp" target="_blank" class="link-button">Open Dijkstra's Code</a>
+                <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp', '_blank')">Open Code</button>
+            </div>
         </p>
 
         <h3>Order Allocation</h3>
         <p>
             <strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
-            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes and ensuring cost-effective operations.<br>
-            <strong>Code:</strong> 
-            <a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp" target="_blank" class="link-button">Open Kruskal's Code</a>
+            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes.<br>
+            <strong>Code:</strong>
+            <div class="button-container">
+                <a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp" target="_blank" class="link-button">Open Kruskal's Code</a>
+                <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp', '_blank')">Open Code</button>
+            </div>
         </p>
 
         <h3>Delivery Route Bottleneck Detection</h3>
         <p>
             <strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
-            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
-            <strong>Code:</strong> 
-            <a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp" target="_blank" class="link-button">Open BFS Code</a>
+            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components.<br>
+            <strong>Code:</strong>
+            <div class="button-container">
+                <a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp" target="_blank" class="link-button">Open BFS Code</a>
+                <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp', '_blank')">Open Code</button>
+            </div>
         </p>
     </section>
 </body>
