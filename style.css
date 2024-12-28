@@ -1,74 +1,76 @@
-/* Reset some default styling */
-body, h1, h2, h3, p, ul, li, nav {
-    margin: 0;
-    padding: 0;
-}
-
-/* Set base font and body styling */
+/* General Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     color: #333;
-    padding: 20px;
 }
 
-/* Header Section */
+/* Header Styling */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin: 0;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 18px;
     margin-top: 10px;
 }
 
 /* Section Styling */
 section {
+    padding: 20px;
     margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Course Introduction */
+/* Headings inside sections */
 section h2 {
-    font-size: 1.8rem;
+    font-size: 28px;
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 10px;
 }
 
-section ul {
+/* List Styling */
+ul {
     list-style-type: none;
-    font-size: 1.1rem;
+    padding: 0;
 }
 
-section ul li {
-    margin-bottom: 10px;
+ul li {
+    font-size: 16px;
+    margin: 5px 0;
 }
 
-/* Team Introduction Section */
-section ul li strong {
-    color: #4CAF50;
-}
-
-/* Select Dropdown Styling */
+/* Dropdown Styling */
 #teamMemberSelect {
     font-size: 16px;
-    padding: 8px;
-    margin: 15px 0;
+    padding: 10px;
+    margin-top: 10px;
     width: 100%;
     max-width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    transition: all 0.3s ease;
 }
 
-/* Business Cases Section */
+#teamMemberSelect:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Business Cases Section Styling */
 .business-cases {
     margin-top: 20px;
     padding: 15px;
@@ -79,13 +81,12 @@ section ul li strong {
 }
 
 .business-cases h3 {
-    font-size: 1.5rem;
-    color: #4CAF50;
-    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
 }
 
 .business-cases ul {
-    font-size: 1.1rem;
+    font-size: 16px;
     line-height: 1.6;
 }
 
@@ -94,40 +95,77 @@ section ul li strong {
     margin-left: 20px;
 }
 
-/* Link Styling for Course Reflections */
-nav a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin: 10px 0;
-}
-
-nav a:hover {
-    color: #45a049;
-}
-
-/* Link button styling */
+/* Link Button Styling */
 .link-button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
 .link-button:hover {
     background-color: #45a049;
 }
 
-/* Footer Styling (optional) */
+/* Navigation Link Styling */
+nav a {
+    display: block;
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #45a049;
+}
+
+/* Footer Styling */
 footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px 0;
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    #teamMemberSelect {
+        font-size: 14px;
+    }
+
+    .business-cases {
+        padding: 10px;
+    }
+
+    .link-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
 }
