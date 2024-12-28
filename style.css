@@ -1,137 +1,133 @@
-/* Reset default margin and padding */
-* {
+/* Reset some default styling */
+body, h1, h2, h3, p, ul, li, nav {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Set base font and body styling */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     padding: 20px;
 }
 
-/* Main Container */
-section {
-    background-color: white;
-    padding: 2rem;
-    width: 100%;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: left;
-    margin: 20px auto;
-}
-
-/* Header */
+/* Header Section */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin: 1rem 0 0;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
-/* Section Titles */
-h2 {
+/* Section Styling */
+section {
+    margin: 20px 0;
+}
+
+/* Course Introduction */
+section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: none;
+    font-size: 1.1rem;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Team Introduction Section */
+section ul li strong {
     color: #4CAF50;
-    margin-bottom: 1rem;
 }
 
-/* Navigation Link */
-nav {
-    margin-top: 1rem;
+/* Select Dropdown Styling */
+#teamMemberSelect {
+    font-size: 16px;
+    padding: 8px;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
+/* Business Cases Section */
+.business-cases {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    display: none;
+}
+
+.business-cases h3 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.business-cases ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.business-cases li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Link Styling for Course Reflections */
 nav a {
     color: #4CAF50;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    background-color: #e7f7e7;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px 0;
 }
 
 nav a:hover {
-    background-color: #c3ebc3;
+    color: #45a049;
 }
 
-/* Styling for the 'About SDGs' section */
-#sdgs-info {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#sdgs-info p {
-    margin-bottom: 20px;  /* Adding space below each paragraph */
-}
-
+/* Link button styling */
 .link-button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 15px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
-    display: inline-block; /* Ensuring the button is inline-block to prevent overlap */
-    margin-top: 20px;  /* Add space between the paragraphs and the button */
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .link-button:hover {
     background-color: #45a049;
 }
 
-/* Styling for the 'Implementation of Sorting and Graph Algorithms' section */
-#algorithms-section {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
+/* Footer Styling (optional) */
+footer {
     text-align: center;
-}
-
-#algorithms-section h2 {
-    color: #4CAF50;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-#algorithms-section p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-.link-button {
+    margin-top: 40px;
+    padding: 20px 0;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.link-button:hover {
-    background-color: #45a049;
 }
