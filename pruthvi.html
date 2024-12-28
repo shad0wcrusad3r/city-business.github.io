@@ -87,6 +87,23 @@
             overflow-x: auto;
         }
 
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 28px;
@@ -190,23 +207,24 @@
         <p><strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
             <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers, ensuring timely delivery and fuel efficiency.<br>
             <strong>Code:</strong>
-            <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main//dijk.cpp', '_blank')">Open Dijkstra's Code</button>
+            <button id="dijkstra-button" onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp', '_blank')">View Dijkstra's Code</button>
         </p>
 
         <h3>Order Allocation</h3>
         <p><strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
             <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes and ensuring cost-effective operations.<br>
             <strong>Code:</strong>
-            <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main//kruskal.cpp', '_blank')">Open Kruskal's Code</button>
+            <button id="kruskal-button" onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp', '_blank')">View Kruskal's Code</button>
         </p>
 
         <h3>Delivery Route Bottleneck Detection</h3>
         <p><strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
             <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
             <strong>Code:</strong>
-            <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main//bfs.cpp', '_blank')">Open BFS Code</button>
+            <button id="bfs-button" onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp', '_blank')">View BFS Code</button>
         </p>
     </section>
+
 </body>
 
 </html>
