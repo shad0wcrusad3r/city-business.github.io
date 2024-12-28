@@ -98,6 +98,30 @@
             outline: none;
         }
 
+        .go-back-btn {
+            background-color: #f44336; /* Red background for the Go Back button */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .go-back-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .go-back-btn:active {
+            background-color: #c2185b;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -224,6 +248,8 @@
             <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp'">Open BFS Code</button>
         </p>
     </section>
+
+    <button class="go-back-btn" onclick="window.history.back()">Go Back</button>
 
 </body>
 </html>
