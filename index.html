@@ -115,50 +115,18 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById('teamMemberSelect').addEventListener('change', function() {
-            var selectedMember = this.value;
-            var businessCasesDiv = document.getElementById('businessCases');
-            
-            // Clear the current content
-            businessCasesDiv.innerHTML = '';
-
-            if (selectedMember === 'aditya') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Aditya's Business Cases</h3>
-                    <ul>
-                        <li><a href="aditya.html#electricity-generation">Electricity Generation</a></li>
-                        <li><a href="aditya.html#public-transport">Public Transport</a></li>
-                    </ul>
-                `;
-            } else if (selectedMember === 'pruthvi') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Pruthvi's Business Cases</h3>
-                    <ul>
-                        <li><a href="pruthvi.html#house-rentals">House Rentals</a></li>
-                        <li><a href="pruthvi.html#food-delivery">Food Delivery Service</a></li>
-                    </ul>
-                `;
-            } else if (selectedMember === 'sushant') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Sushant's Business Cases</h3>
-                    <ul>
-                        <li><a href="sushant.html#ev-charge-stations">EV Charge Stations</a></li>
-                        <li><a href="sushant.html#automobile-service">Automobile Service Centers</a></li>
-                    </ul>
-                `;
-            } else if (selectedMember === 'prashanth') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Prashanth's Business Cases</h3>
-                    <ul>
-                        <li><a href="prashanth.html#traffic">Traffic Management</a></li>
-                    </ul>
-                `;
-            }
-
-            // Display the div when a member is selected
-            businessCasesDiv.style.display = selectedMember ? 'block' : 'none';
-        });
-    </script>
+ <section>
+        <h2>👨‍💻 Select a Team Member and Business Case</h2>
+        <select id="teamMemberSelect" onchange="openLink(this.value)">
+            <option value="">Select a team member and business case...</option>
+            <option value="adityaelect.html#electricity-generation">Aditya Patil - Electricity Generation</option>
+            <option value="adityatrans.html#public-transport">Aditya Patil - Public Transport</option>
+            <option value="pruthvihouse.html#house-rentals">Pruthvi R. - House Rentals</option>
+            <option value="pruthvi.html#food-delivery">Pruthvi R. - Food Delivery Service</option>
+            <option value="sushantev.html#ev-charge-stations">Sushant Kulkarni - EV Charge Stations</option>
+            <option value="sushantauto.html#automobile-service">Sushant Kulkarni - Automobile Service Centers</option>
+            <option value="prashanthtraffic.html#traffic">Prashanth Chiniwal - Traffic Management</option>
+        </select>
+    </section>
 </body>
 </html>
