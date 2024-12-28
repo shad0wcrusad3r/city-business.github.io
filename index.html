@@ -14,7 +14,6 @@
         <p>Discover our team, project insights, and identified business use cases for our city!</p>
     </header>
 
- 
     <section>
         <h2>📚 Course Introduction</h2>
         <ul>
@@ -85,19 +84,64 @@
         <p>Explore how sorting and graph algorithms are applied to enhance our business use cases.</p>
         <a href="code.html" class="link-button">Explore Algorithms</a>
     </section>
-   <section>
+
+    <section>
         <h2>👨‍💻 Select a Team Member</h2>
-        <select id="teamMemberSelect" onchange="window.location.href=this.value;">
+        <select id="teamMemberSelect">
             <option value="">Select a team member...</option>
-            <option value="adityaelect.html#electricity-generation">Aditya Patil - Electricity Generation</option>
-            <option value="adityapubl.html#public-transport">Aditya Patil - Public Transport</option>
-            <option value="pruthvihouse.html#house-rentals">Pruthvi R. - House Rentals</option>
-            <option value="pruthvi.html#food-delivery">Pruthvi R. - Food Delivery Service</option>
-            <option value="sushantev.html#ev-charge-stations">Sushant Kulkarni - EV Charge Stations</option>
-            <option value="sushantauto.html#automobile-service">Sushant Kulkarni - Automobile Service Centers</option>
-            <option value="prashanthtraffic.html#traffic">Prashanth Chiniwal - Traffic Management</option>
+            <option value="aditya">Aditya Patil</option>
+            <option value="pruthvi">Pruthvi R.</option>
+            <option value="sushant">Sushant Kulkarni</option>
+            <option value="prashanth">Prashanth Chiniwal</option>
         </select>
+
+        <div id="businessCases" class="business-cases">
+            <!-- Business cases will be dynamically populated here -->
+        </div>
     </section>
+    <script>
+        document.getElementById('teamMemberSelect').addEventListener('change', function () {
+            var selectedMember = this.value;
+            var businessCasesDiv = document.getElementById('businessCases');
+            // Clear the current content
+            businessCasesDiv.innerHTML = '';
+            if (selectedMember === 'aditya') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Aditya's Business Cases</h3>
+                    <ul>
+                        <li><a href="aditya.html#electricity-generation">Electricity Generation</a></li>
+                        <li><a href="aditya.html#public-transport">Public Transport</a></li>
+                    </ul>
+                `;
+            } else if (selectedMember === 'pruthvi') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Pruthvi's Business Cases</h3>
+                    <ul>
+                        <li><a href="pruthvi.html#house-rentals">House Rentals</a></li>
+                        <li><a href="pruthvi.html#food-delivery">Food Delivery Service</a></li>
+                    </ul>
+                `;
+            } else if (selectedMember === 'sushant') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Sushant's Business Cases</h3>
+                    <ul>
+                        <li><a href="sushant.html#ev-charge-stations">EV Charge Stations</a></li>
+                        <li><a href="sushant.html#automobile-service">Automobile Service Centers</a></li>
+                    </ul>
+                `;
+            } else if (selectedMember === 'prashanth') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Prashanth's Business Cases</h3>
+                    <ul>
+                        <li><a href="prashanth.html#traffic">Traffic Management</a></li>
+                    </ul>
+                `;
+            }
+
+            // Display the div when a member is selected
+            businessCasesDiv.style.display = selectedMember ? 'block' : 'none';
+        });
+    </script>
 
 </body>
 
