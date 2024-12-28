@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team E16 - Homepage</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,6 +14,7 @@
         <p>Discover our team, project insights, and identified business use cases for our city!</p>
     </header>
 
+ 
     <section>
         <h2>📚 Course Introduction</h2>
         <ul>
@@ -25,6 +26,7 @@
 
     <section>
         <h2>👨‍💻 Team Introduction</h2>
+        <p>We are Team E16, a group of enthusiastic learners applying algorithmic techniques to solve real-world problems in our Design and Analysis of Algorithms course project.</p>
         <ul>
             <li><strong>Prashanth Chiniwal</strong> - Roll No. 525</li>
             <li><strong>Aditya M. Patil</strong> - Roll No. 532</li>
@@ -71,22 +73,6 @@
         </div>
     </section>
 
-    <section>
-        <h2>📖 Course Learning Reflections</h2>
-        <nav>
-            <a href="index1.html" target="_blank">Course Reflections by Sushant</a>
-        </nav>
-        <nav>
-            <a href="index2.html" target="_blank">Course Reflections by Pruthvi</a>
-        </nav>
-        <nav>
-            <a href="index3.html" target="_blank">Course Reflections by Prashanth</a>
-        </nav>
-        <nav>
-            <a href="index4.html" target="_blank">Course Reflections by Aditya</a>
-        </nav>
-    </section>
-
     <section id="sdgs-info">
         <h2>🌍 About SDGs (Sustainable Development Goals)</h2>
         <p><strong>SDGs</strong> are a set of 17 global goals established by the United Nations, aimed at addressing urgent global challenges like poverty, inequality, climate change, and peace.</p>
@@ -99,28 +85,12 @@
         <p>Explore how sorting and graph algorithms are applied to enhance our business use cases.</p>
         <a href="code.html" class="link-button">Explore Algorithms</a>
     </section>
-
-    <section>
+   <section>
         <h2>👨‍💻 Select a Team Member</h2>
-        <select id="teamMemberSelect">
+        <select id="teamMemberSelect" onchange="window.location.href=this.value;">
             <option value="">Select a team member...</option>
-            <option value="aditya">Aditya Patil</option>
-            <option value="pruthvi">Pruthvi R.</option>
-            <option value="sushant">Sushant Kulkarni</option>
-            <option value="prashanth">Prashanth Chiniwal</option>
-        </select>
-
-        <div id="businessCases" class="business-cases">
-            <!-- Business cases will be dynamically populated here -->
-        </div>
-    </section>
-
- <section>
-        <h2>👨‍💻 Select a Team Member and Business Case</h2>
-        <select id="teamMemberSelect" onchange="openLink(this.value)">
-            <option value="">Select a team member and business case...</option>
             <option value="adityaelect.html#electricity-generation">Aditya Patil - Electricity Generation</option>
-            <option value="adityatrans.html#public-transport">Aditya Patil - Public Transport</option>
+            <option value="adityapubl.html#public-transport">Aditya Patil - Public Transport</option>
             <option value="pruthvihouse.html#house-rentals">Pruthvi R. - House Rentals</option>
             <option value="pruthvi.html#food-delivery">Pruthvi R. - Food Delivery Service</option>
             <option value="sushantev.html#ev-charge-stations">Sushant Kulkarni - EV Charge Stations</option>
@@ -128,5 +98,7 @@
             <option value="prashanthtraffic.html#traffic">Prashanth Chiniwal - Traffic Management</option>
         </select>
     </section>
+
 </body>
+
 </html>
