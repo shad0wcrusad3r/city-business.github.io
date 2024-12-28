@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delivery Service Algorithms</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Inline CSS for quick custom styling (can be moved to an external file) */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
@@ -17,7 +15,6 @@
             color: #333;
         }
 
-        /* Header Styling */
         header {
             background-color: #4CAF50;
             color: white;
@@ -34,7 +31,6 @@
             font-size: 16px;
         }
 
-        /* Section Styling */
         section {
             padding: 20px;
             margin: 20px 0;
@@ -64,7 +60,6 @@
             font-weight: bold;
         }
 
-        /* Table Styling */
         table {
             width: 100%;
             margin-top: 20px;
@@ -84,7 +79,14 @@
             background-color: #f2f2f2;
         }
 
-        /* Responsive Design */
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 28px;
@@ -121,58 +123,70 @@
         <p>Explore the algorithms and their use cases for optimizing food delivery services.</p>
     </header>
 
-    <!-- Food Delivery Service: Product Sorting and Optimization -->
     <section>
-        <h2>🍔 Food Delivery Service: Product Sorting and Optimization</h2>
-        <p>This table showcases food delivery products sorted by ratings (highest to lowest) and prices (lowest to highest).</p>
+        <h2>Why We Use Dijkstra's Algorithm</h2>
+        <p>
+            Dijkstra's Algorithm is used to calculate the shortest path between the restaurant and the customer's location, ensuring:
+        </p>
+        <ul>
+            <li>Timely delivery of food.</li>
+            <li>Fuel-efficient routing for delivery agents.</li>
+            <li>Cost-effective operations in urban settings.</li>
+        </ul>
+    </section>
 
+    <section>
+        <h2>Delivery Route Network</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Product Name</th>
-                    <th>Category</th>
-                    <th>Price (₹)</th>
-                    <th>Rating</th>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Road)</th>
+                    <th>Weight (Time)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Paneer Butter Masala</td>
-                    <td>Main Course</td>
-                    <td>250</td>
-                    <td>4.8</td>
+                    <td>Restaurant</td>
+                    <td>House 1</td>
+                    <td>10</td>
                 </tr>
                 <tr>
-                    <td>Margherita Pizza</td>
-                    <td>Snacks</td>
-                    <td>200</td>
-                    <td>4.5</td>
+                    <td>Restaurant</td>
+                    <td>House 2</td>
+                    <td>15</td>
                 </tr>
                 <tr>
-                    <td>Veg Biryani</td>
-                    <td>Main Course</td>
-                    <td>150</td>
-                    <td>4.4</td>
+                    <td>House 1</td>
+                    <td>Park</td>
+                    <td>5</td>
                 </tr>
                 <tr>
-                    <td>Cold Coffee</td>
-                    <td>Beverages</td>
-                    <td>120</td>
-                    <td>4.2</td>
+                    <td>House 2</td>
+                    <td>School</td>
+                    <td>7</td>
                 </tr>
                 <tr>
-                    <td>Chocolate Brownie</td>
-                    <td>Desserts</td>
-                    <td>100</td>
-                    <td>4.0</td>
+                    <td>Park</td>
+                    <td>School</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>Office</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Office</td>
+                    <td>House 3</td>
+                    <td>10</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-    <!-- Food Delivery System Algorithms -->
     <section>
-        <h2>🍔 Food Delivery System Algorithms</h2>
+        <h2>Food Delivery System Algorithms</h2>
 
         <h3>Route Optimization</h3>
         <p><strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
@@ -186,7 +200,6 @@
             <strong>Code:</strong> KRUSKAL'S CODE
         </p>
 
-    
         <h3>Delivery Route Bottleneck Detection</h3>
         <p><strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
             <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
