@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background for the header */
     color: white;
     text-align: center;
     padding: 20px;
@@ -28,6 +28,9 @@ header p {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #e8f5e9; /* Light green background for the content */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .algorithm {
