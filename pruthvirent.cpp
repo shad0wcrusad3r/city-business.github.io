@@ -87,19 +87,13 @@ footer {
     bottom: 0;
 }
 
-/* Button styling */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
+/* Styling for the code link */
+.code-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #45a049;
+.code-link a:hover {
+    text-decoration: underline;
 }
