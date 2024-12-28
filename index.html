@@ -6,6 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team E16 - Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Green button styles */
+        .team-button {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .team-button:hover {
+            background-color: #45a049;
+        }
+
+        .option-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .option-button:hover {
+            background-color: #45a049;
+        }
+
+        .options {
+            display: none;
+        }
+
+        /* Business cases display */
+        .business-cases {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -116,29 +158,29 @@
         <h2>👨‍💻 Click to Show Options</h2>
 
         <!-- Button for Pruthvi -->
-        <button id="pruthviButton">Pruthvi</button>
-        <div id="pruthviOptions" class="options" style="display: none;">
+        <button id="pruthviButton" class="team-button">Pruthvi</button>
+        <div id="pruthviOptions" class="options">
             <button class="option-button" onclick="showBusinessCases('pruthviHouseRent')">House Rentals</button>
             <button class="option-button" onclick="showBusinessCases('pruthviFoodDelivery')">Food Delivery Service</button>
         </div>
 
         <!-- Button for Aditya -->
-        <button id="adityaButton">Aditya</button>
-        <div id="adityaOptions" class="options" style="display: none;">
+        <button id="adityaButton" class="team-button">Aditya</button>
+        <div id="adityaOptions" class="options">
             <button class="option-button" onclick="showBusinessCases('adityaElectricity')">Electricity Generation</button>
             <button class="option-button" onclick="showBusinessCases('adityaTransport')">Public Transport</button>
         </div>
 
         <!-- Button for Sushant -->
-        <button id="sushantButton">Sushant</button>
-        <div id="sushantOptions" class="options" style="display: none;">
+        <button id="sushantButton" class="team-button">Sushant</button>
+        <div id="sushantOptions" class="options">
             <button class="option-button" onclick="showBusinessCases('sushantEvStations')">EV Charge Stations</button>
             <button class="option-button" onclick="showBusinessCases('sushantAutoService')">Automobile Service Centers</button>
         </div>
 
         <!-- Button for Prashanth -->
-        <button id="prashanthButton">Prashanth</button>
-        <div id="prashanthOptions" class="options" style="display: none;">
+        <button id="prashanthButton" class="team-button">Prashanth</button>
+        <div id="prashanthOptions" class="options">
             <button class="option-button" onclick="showBusinessCases('prashanthTraffic')">Traffic Management</button>
         </div>
 
@@ -157,75 +199,4 @@
             document.getElementById('adityaOptions').style.display = 'block';
         });
         document.getElementById('sushantButton').addEventListener('click', function () {
-            document.getElementById('sushantOptions').style.display = 'block';
-        });
-        document.getElementById('prashanthButton').addEventListener('click', function () {
-            document.getElementById('prashanthOptions').style.display = 'block';
-        });
-
-        // Function to display business cases based on the selected option
-        function showBusinessCases(option) {
-            var businessCasesDiv = document.getElementById('businessCases');
-            
-            // Clear any previous content
-            businessCasesDiv.innerHTML = '';
-
-            if (option === 'pruthviHouseRent') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Pruthvi's Business Case: House Rentals</h3>
-                    <ul>
-                        <li><a href="pruthvirent.html#house-rentals">House Rentals</a></li>
-                    </ul>
-                `;
-            } else if (option === 'pruthviFoodDelivery') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Pruthvi's Business Case: Food Delivery</h3>
-                    <ul>
-                        <li><a href="pruthvi.html#food-delivery">Food Delivery Service</a></li>
-                    </ul>
-                `;
-            } else if (option === 'adityaElectricity') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Aditya's Business Case: Electricity Generation</h3>
-                    <ul>
-                        <li><a href="aditya.html#electricity-generation">Electricity Generation</a></li>
-                    </ul>
-                `;
-            } else if (option === 'adityaTransport') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Aditya's Business Case: Public Transport</h3>
-                    <ul>
-                        <li><a href="aditya.html#public-transport">Public Transport</a></li>
-                    </ul>
-                `;
-            } else if (option === 'sushantEvStations') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Sushant's Business Case: EV Charge Stations</h3>
-                    <ul>
-                        <li><a href="sushant.html#ev-charge-stations">EV Charge Stations</a></li>
-                    </ul>
-                `;
-            } else if (option === 'sushantAutoService') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Sushant's Business Case: Automobile Service Centers</h3>
-                    <ul>
-                        <li><a href="sushant.html#automobile-service">Automobile Service Centers</a></li>
-                    </ul>
-                `;
-            } else if (option === 'prashanthTraffic') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Prashanth's Business Case: Traffic Management</h3>
-                    <ul>
-                        <li><a href="prashanth.html#traffic">Traffic Management</a></li>
-                    </ul>
-                `;
-            }
-
-            // Show the business cases section
-            businessCasesDiv.style.display = 'block';
-        }
-    </script>
-
-</body>
-
-</html>
+            document.getElementById('sushantOptions').style.display =
