@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>House Rental Algorithms</h1>
+        <p>Explore the algorithms and their use cases for optimizing house rental services.</p>
+    </header>
+
+    <section class="content">
+        <section class="algorithm">
+            <h2>Why We Use Prim's Algorithm</h2>
+            <p><strong>Prim’s Algorithm</strong> is used to calculate the optimal property allocation for rental agents, ensuring:</p>
+            <ul>
+                <li>Efficient allocation of agents to properties.</li>
+                <li>Minimization of travel time for agents.</li>
+                <li>Cost-effective operations for managing rental properties.</li>
+            </ul>
+        </section>
+
+        <section class="algorithm">
+            <h2>Rental Property Network</h2>
+            <table>
+                <tr>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Road)</th>
+                    <th>Weight (Time)</th>
+                </tr>
+                <tr>
+                    <td>House A</td>
+                    <td>House B</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>House A</td>
+                    <td>Park</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>House B</td>
+                    <td>House C</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>House C</td>
+                    <td>School</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Park</td>
+                    <td>School</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>Office</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Office</td>
+                    <td>House D</td>
+                    <td>10</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="algorithm">
+            <h2>Order Allocation</h2>
+            <p><strong>Algorithm:</strong> Minimum Spanning Tree (Prim’s Algorithm)</p>
+            <p><strong>Use Case:</strong> Assigns rental agents to properties optimally, minimizing overlap and maximizing coverage.</p>
+            <p><strong>Code:</strong> <a href="#">Open Prim's Code</a> <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/prim.cpp'">View Code</button></p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Property Network Connectivity</h2>
+            <p><strong>Algorithm:</strong> Depth-First Search (DFS)</p>
+            <p><strong>Use Case:</strong> Analyzes the rental network to detect connected properties or unconnected components (bottlenecks).</p>
+            <p><strong>Code:</strong> <a href="#">Open DFS Code</a> <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dfs.cpp'">View Code</button></p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Cost Minimization</h2>
+            <p><strong>Algorithm:</strong> Bellman-Ford Algorithm</p>
+            <p><strong>Use Case:</strong> Determines the minimum travel cost from the rental office to each property, ensuring the cheapest routes for agents or tenants.</p>
+            <p><strong>Code:</strong> <a href="#">Open Bellman-Ford Code</a> <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bellman-ford.cpp'">View Code</button></p>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 House Rental Services</p>
+    </footer>
+</body>
+</html>
