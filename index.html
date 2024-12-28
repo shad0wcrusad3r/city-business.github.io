@@ -6,10 +6,62 @@
     <title>Team E16 - Homepage</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Styling for the dropdown and business cases */
+        #teamMemberSelect {
+            font-size: 16px;
+            padding: 8px;
+            margin: 15px 0;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .business-cases {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            display: none;
+        }
+
+        .business-cases h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .business-cases ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .business-cases li {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        /* Link button styling */
+        .link-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .link-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <header>
-
         <h1>Welcome to Team E16's Homepage 👋</h1>
         <p>Discover our team, project insights, and identified business use cases for our city!</p>
     </header>
@@ -18,7 +70,7 @@
         <h2>📚 Course Introduction</h2>
         <ul>
             <li>The Design and Analysis of Algorithms course is a continuation of the Data Structures class from 2nd semester. It begins with studying algorithms for basic puzzles like Towers of Hanoi and n-Queens, gradually exploring more complex algorithms for various data structures.</li>
-            <li>We have studied data structures such as stacks, queues, trees, heaps, skip lists, tries, and graphs.Algorithms include tree node deletion, heapify, Boyer-Moore, Knuth-Morris-Pratt, and sorting techniques like bubble, selection, insertion, merge, quick, and heap sort.</li>
+            <li>We have studied data structures such as stacks, queues, trees, heaps, skip lists, tries, and graphs. Algorithms include tree node deletion, heapify, Boyer-Moore, Knuth-Morris-Pratt, and sorting techniques like bubble, selection, insertion, merge, quick, and heap sort.</li>
             <li>The course is fundamental for analyzing real-world problems and designing solutions, such as using trie data structures in search engines or applying string search algorithms.</li>
         </ul>
     </section>
@@ -37,72 +89,41 @@
         </ul>
     </section>
 
+    <!-- Select a team member and display business cases -->
     <section>
-        <h2>🏙️ Business Use Cases for Our City</h2>
-        <div class="use-cases">
-            <div class="case">
-                <h3>Electricity Generation</h3>
-                <p>Using river currents flowing throughout the city to generate electricity sustainably.</p>
-            </div>
-            <div class="case">
-                <h3>Transport</h3>
-                <p>An exclusive, private transport facility to help residents navigate within the city.</p>
-            </div>
-            <div class="case">
-                <h3>House Rentals</h3>
-                <p>A property management service providing insights on room availability for rent.</p>
-            </div>
-            <div class="case">
-                <h3>EV Charge Stations</h3>
-                <p>A private company setting up charging stations, including an application for their business.</p>
-            </div>
-            <div class="case">
-                <h3>Food Delivery Service</h3>
-                <p>An efficient service ensuring timely delivery of meals across the city.</p>
-            </div>
-            <div class="case">
-                <h3>Automobile Service Centers</h3>
-                <p>Centers offering repairs and maintenance for vehicles at convenient locations.</p>
-            </div>
-            <div class="case">
-                <h3>Homestay</h3>
-                <p>Providing homestay options for travelers, offering a local touch and comfortable stays.</p>
-            </div>
-            <div class="case">
-                <h3>Short-Term Rentals</h3>
-                <p>Short-term room rental services located in key parts of the city.</p>
-            </div>
+        <h2>👥 Select a Team Member's Business Cases</h2>
+        <p>Select a team member's name to know their business cases:</p>
+        <select id="teamMemberSelect">
+            <option value="">--Select a Team Member--</option>
+            <option value="aditya">Aditya M. Patil</option>
+            <option value="pruthvi">Pruthvi R.</option>
+            <option value="sushant">Sushant M. Kulkarni</option>
+            <option value="prashanth">Prashanth Chiniwal</option>
+        </select>
+
+        <div id="businessCases" class="business-cases">
+            <!-- The business cases for the selected team member will appear here. -->
         </div>
     </section>
 
+    <!-- Existing "Course Learning Reflections" Section -->
     <section>
-        <h2>💡 Reflecting on City Design and Business Use Cases</h2>
-        <ul>
-            <li>We took inspiration from online resources for city design and added sections through discussion and trial and error.</li>
-            <li>For business use cases, we brainstormed ideas, refined them through discussion, and eliminated irrelevant ones.</li>
-        </ul>
-    </section>
-
-<section>
         <h2>📖 Course Learning Reflections</h2>
         <nav>
             <a href="index1.html" target="_blank" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
                 Course Reflections by Sushant
             </a>
         </nav>
-
         <nav>
             <a href="index2.html" target="_blank" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
                 Course Reflections by Pruthvi
             </a>
         </nav>
-
         <nav>
             <a href="index3.html" target="_blank" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
                 Course Reflections by Prashanth
             </a>
         </nav>
-
         <nav>
             <a href="index4.html" target="_blank" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
                 Course Reflections by Aditya
@@ -110,21 +131,51 @@
         </nav>
     </section>
 
-    <section id="sdgs-info">
-        <h2>🌍 About SDGs (Sustainable Development Goals)</h2>
-        <p><strong>SDGs (Sustainable Development Goals)</strong> are a set of 17 global goals established by the United Nations, aimed at addressing urgent global challenges such as poverty, inequality, climate change, environmental degradation, and peace. These goals guide efforts toward creating a more sustainable, inclusive, and equitable world by 2030.</p>
-        <p>Each business use case contributes to specific SDGs, ensuring that local solutions have a global impact. By aligning business strategies with these goals, we aim to foster positive social, economic, and environmental outcomes within our city.</p>
-    
-        <p>To explore how we can align our business use cases with the SDGs, click the link below:</p>
-        <a href="sdg.html" class="link-button">Learn More About SDGs and Our Business Use Cases</a>
-    </section>
+    <script>
+        document.getElementById('teamMemberSelect').addEventListener('change', function() {
+            var selectedMember = this.value;
+            var businessCasesDiv = document.getElementById('businessCases');
+            
+            // Clear the current content
+            businessCasesDiv.innerHTML = '';
 
-    <section id="algorithms-section">
-        <h2>🔢 Implementation of Sorting and Graph Algorithms for Business Use Cases</h2>
-        <p>Click the link below to explore how sorting and graph algorithms are implemented in our business use cases.</p>
-        <a href="code.html" class="link-button">Explore Algorithms</a>
-    </section>
+            if (selectedMember === 'aditya') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Aditya's Business Cases</h3>
+                    <ul>
+                        <li>Electricity Generation</li>
+                        <li>Transport</li>
+                    </ul>
+                `;
+            } else if (selectedMember === 'pruthvi') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Pruthvi's Business Cases</h3>
+                    <ul>
+                        <li>House Rentals</li>
+                        <li>Food Delivery Service</li>
+                    </ul>
+                `;
+            } else if (selectedMember === 'sushant') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Sushant's Business Cases</h3>
+                    <ul>
+                        <li>EV Charge Stations</li>
+                        <li>Automobile Service Centers</li>
+                    </ul>
+                `;
+            } else if (selectedMember === 'prashanth') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Prashanth's Business Cases</h3>
+                    <ul>
+                        <li>Homestay</li>
+                        <li>Short-Term Rentals</li>
+                    </ul>
+                `;
+            }
 
-    
+            // Display the div when a member is selected
+            businessCasesDiv.style.display = selectedMember ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>
