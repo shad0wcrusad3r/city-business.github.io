@@ -71,6 +71,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <h2>📖 Course Learning Reflections</h2>
         <nav>
@@ -97,7 +98,7 @@
             </a>
         </nav>
     </section>
-    
+
     <section id="sdgs-info">
         <h2>🌍 About SDGs (Sustainable Development Goals)</h2>
         <p><strong>SDGs</strong> are a set of 17 global goals established by the United Nations, aimed at addressing urgent global challenges like poverty, inequality, climate change, and peace.</p>
@@ -127,11 +128,11 @@
     </section>
 
     <script>
-        document.getElementById('teamMemberSelect').addEventListener('change', function () {
-            var selectedMember = this.value;
+        // Function to update the business cases based on selected member
+        function updateBusinessCases(selectedMember) {
             var businessCasesDiv = document.getElementById('businessCases');
             
-            // Clear the current content
+            // Clear current content
             businessCasesDiv.innerHTML = '';
 
             if (selectedMember === 'aditya') {
@@ -167,8 +168,19 @@
                 `;
             }
 
-            // Display the div when a member is selected
+            // Show or hide the business cases section based on the selection
             businessCasesDiv.style.display = selectedMember ? 'block' : 'none';
+        }
+
+        // Event listener for dropdown change
+        document.getElementById('teamMemberSelect').addEventListener('change', function () {
+            updateBusinessCases(this.value);
+        });
+
+        // Reset when navigating back
+        window.addEventListener('popstate', function () {
+            document.getElementById('teamMemberSelect').selectedIndex = 0;
+            updateBusinessCases('');
         });
     </script>
 
