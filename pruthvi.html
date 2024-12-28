@@ -39,14 +39,9 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
+        section h2,
         section h3 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 10px;
             color: #333;
         }
@@ -79,25 +74,14 @@
             background-color: #f2f2f2;
         }
 
-        pre {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            overflow-x: auto;
-        }
-
         button {
             background-color: #4CAF50;
             color: white;
-            border: none;
             padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
         }
 
         button:hover {
@@ -109,12 +93,9 @@
                 font-size: 28px;
             }
 
-            section h2 {
-                font-size: 24px;
-            }
-
+            section h2,
             section h3 {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
 
@@ -123,12 +104,9 @@
                 font-size: 22px;
             }
 
-            section h2 {
-                font-size: 20px;
-            }
-
+            section h2,
             section h3 {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
     </style>
@@ -204,27 +182,29 @@
 
     <section>
         <h3>Route Optimization</h3>
-        <p><strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
-            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers, ensuring timely delivery and fuel efficiency.<br>
+        <p>
+            <strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
+            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers.<br>
             <strong>Code:</strong>
-            <button id="dijkstra-button" onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp', '_blank')">View Dijkstra's Code</button>
+            <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp', '_blank')">Open Dijkstra's Code</button>
         </p>
 
         <h3>Order Allocation</h3>
-        <p><strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
-            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes and ensuring cost-effective operations.<br>
+        <p>
+            <strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
+            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes.<br>
             <strong>Code:</strong>
-            <button id="kruskal-button" onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp', '_blank')">View Kruskal's Code</button>
+            <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp', '_blank')">Open Kruskal's Code</button>
         </p>
 
         <h3>Delivery Route Bottleneck Detection</h3>
-        <p><strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
-            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
+        <p>
+            <strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
+            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components.<br>
             <strong>Code:</strong>
-            <button id="bfs-button" onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp', '_blank')">View BFS Code</button>
+            <button onclick="window.open('https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp', '_blank')">Open BFS Code</button>
         </p>
     </section>
-
 </body>
 
 </html>
