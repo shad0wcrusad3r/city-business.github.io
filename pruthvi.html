@@ -52,7 +52,8 @@
             color: #4e342e;
         }
 
-        button {
+        button,
+        a.link-button {
             background-color: #4CAF50;
             color: white;
             font-size: 16px;
@@ -61,16 +62,18 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin: 10px 0;
+            margin: 5px 0;
             text-decoration: none;
             display: inline-block;
         }
 
-        button:hover {
+        button:hover,
+        a.link-button:hover {
             background-color: #388E3C;
         }
 
-        button:focus {
+        button:focus,
+        a.link-button:focus {
             outline: none;
             box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.4);
         }
@@ -95,23 +98,26 @@
 
     <section>
         <h3>Route Optimization</h3>
-        <p><strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
+        <p>
+            <strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
             <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers, ensuring timely delivery and fuel efficiency.<br>
-            <strong>Code:</strong>
+            <strong>Code:</strong> 
             <a href="dijkstra.html" class="link-button">Open Dijkstra's Code</a>
         </p>
 
         <h3>Order Allocation</h3>
-        <p><strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
+        <p>
+            <strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
             <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes and ensuring cost-effective operations.<br>
-            <strong>Code:</strong>
+            <strong>Code:</strong> 
             <a href="kruskal.html" class="link-button">Open Kruskal's Code</a>
         </p>
 
         <h3>Delivery Route Bottleneck Detection</h3>
-        <p><strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
+        <p>
+            <strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
             <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components, ensuring uninterrupted service.<br>
-            <strong>Code:</strong>
+            <strong>Code:</strong> 
             <a href="bfs.html" class="link-button">Open BFS Code</a>
         </p>
     </section>
