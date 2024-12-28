@@ -256,32 +256,52 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById('teamMemberSelect').addEventListener('change', function () {
-            var selectedMember = this.value;
-            var businessCasesDiv = document.getElementById('businessCases');
-            
-            // Clear the current content
-            businessCasesDiv.innerHTML = '';
+  <script>
+<script>
+    document.getElementById('teamMemberSelect').addEventListener('change', function() {
+        var selectedMember = this.value;
+        var businessCasesDiv = document.getElementById('businessCases');
+        
+        // Clear the current content
+        businessCasesDiv.innerHTML = '';
 
-            // Define business cases for each team member
-            var businessCases = {
-                aditya: ['Transport'],
-                pruthvi: ['Food Delivery Service'],
-                sushant: ['EV Charge Stations'],
-                prashanth: ['Traffic Management']
-            };
+        if (selectedMember === 'aditya') {
+            businessCasesDiv.innerHTML = `
+                <h3>Aditya's Business Cases</h3>
+                <ul>
+                    <li><a href="aditya.html#electricity-generation">Electricity Generation</a></li>
+                    <li><a href="aditya.html#public-transport">Public Transport</a></li>
+                </ul>
+            `;
+        } else if (selectedMember === 'pruthvi') {
+            businessCasesDiv.innerHTML = `
+                <h3>Pruthvi's Business Cases</h3>
+                <ul>
+                    <li><a href="pruthvi.html#house-rentals">House Rentals</a></li>
+                    <li><a href="pruthvi.html#food-delivery">Food Delivery Service</a></li>
+                </ul>
+            `;
+        } else if (selectedMember === 'sushant') {
+            businessCasesDiv.innerHTML = `
+                <h3>Sushant's Business Cases</h3>
+                <ul>
+                    <li><a href="sushant.html#ev-charge-stations">EV Charge Stations</a></li>
+                    <li><a href="sushant.html#automobile-service">Automobile Service Centers</a></li>
+                </ul>
+            `;
+        } else if (selectedMember === 'prashanth') {
+            businessCasesDiv.innerHTML = `
+                <h3>Prashanth's Business Cases</h3>
+                <ul>
+                    <li><a href="prashanth.html#traffic">Traffic Management</a></li>
+                </ul>
+            `;
+        }
 
-            // Display the selected member's business cases
-            if (selectedMember) {
-                var cases = businessCases[selectedMember];
-                businessCasesDiv.innerHTML = `<h3>${selectedMember.charAt(0).toUpperCase() + selectedMember.slice(1)}'s Business Cases</h3><ul>${cases.map(caseItem => `<li><a href="${selectedMember}.html#${caseItem.replace(/\s+/g, '-').toLowerCase()}">${caseItem}</a></li>`).join('')}</ul>`;
-                businessCasesDiv.style.display = 'block';
-            } else {
-                businessCasesDiv.style.display = 'none';
-            }
-        });
-    </script>
+        // Display the div when a member is selected
+        businessCasesDiv.style.display = selectedMember ? 'block' : 'none';
+    });
+</script>
 </body>
 
 </html>
