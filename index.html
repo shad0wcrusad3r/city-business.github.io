@@ -86,7 +86,7 @@
     </section>
 
     <section>
-        <h2>👨‍💻 Select a Team Member</h2>
+        <h2>👨‍💻 Select a Team Member and Business Case</h2>
         <select id="teamMemberSelect">
             <option value="">Select a team member...</option>
             <option value="aditya">Aditya Patil</option>
@@ -99,12 +99,15 @@
             <!-- Business cases will be dynamically populated here -->
         </div>
     </section>
+
     <script>
         document.getElementById('teamMemberSelect').addEventListener('change', function () {
             var selectedMember = this.value;
             var businessCasesDiv = document.getElementById('businessCases');
+            
             // Clear the current content
             businessCasesDiv.innerHTML = '';
+
             if (selectedMember === 'aditya') {
                 businessCasesDiv.innerHTML = `
                     <h3>Aditya's Business Cases</h3>
