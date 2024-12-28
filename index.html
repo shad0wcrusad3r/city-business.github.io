@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Inline CSS for quick custom styling (can be moved to an external file) */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        section ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        section li {
+            margin-left: 20px;
+        }
+
+        /* Dropdown Styling */
         #teamMemberSelect {
             font-size: 16px;
             padding: 8px;
@@ -57,8 +108,46 @@
         .link-button:hover {
             background-color: #45a049;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section h2 {
+                font-size: 24px;
+            }
+
+            #teamMemberSelect {
+                font-size: 14px;
+            }
+
+            .link-button {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            #teamMemberSelect {
+                font-size: 12px;
+            }
+
+            .link-button {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Welcome to Team E16's Homepage 👋</h1>
@@ -84,66 +173,43 @@
             <li><strong>Sushant M. Kulkarni</strong> - Roll No. 534</li>
         </ul>
     </section>
-    <section>
-    <h2>🏙️ Business Use Cases for Our City</h2>
-    <div class="use-cases">
-        <div class="case">
-            <h3>Electricity Generation</h3>
-            <p>Using river currents flowing throughout the city to generate electricity sustainably.</p>
-        </div>
-        <div class="case">
-            <h3>Transport</h3>
-            <p>An exclusive, private transport facility to help residents navigate within the city.</p>
-        </div>
-        <div class="case">
-            <h3>House Rentals</h3>
-            <p>A property management service providing insights on room availability for rent.</p>
-        </div>
-        <div class="case">
-            <h3>EV Charge Stations</h3>
-            <p>A private company setting up charging stations, including an application for their business.</p>
-        </div>
-        <div class="case">
-            <h3>Food Delivery Service</h3>
-            <p>An efficient service ensuring timely delivery of meals across the city.</p>
-        </div>
-        <div class="case">
-            <h3>Automobile Service Centers</h3>
-            <p>Centers offering repairs and maintenance for vehicles at convenient locations.</p>
-        </div>
-        <div class="case">
-            <h3>Homestay</h3>
-            <p>Providing homestay options for travelers, offering a local touch and comfortable stays.</p>
-        </div>
-        <div class="case">
-            <h3>Short-Term Rentals</h3>
-            <p>Short-term room rental services located in key parts of the city.</p>
-        </div>
-    </div>
-</section>
 
     <section>
-        <h2>👥 Select a Team Member's Business Cases</h2>
-        <p>Select a team member to view their business cases:</p>
-        <select id="teamMemberSelect">
-            <option value="">--Select a Team Member--</option>
-            <option value="aditya">Aditya M. Patil</option>
-            <option value="pruthvi">Pruthvi R.</option>
-            <option value="sushant">Sushant M. Kulkarni</option>
-            <option value="prashanth">Prashanth Chiniwal</option>
-        </select>
-
-        <div id="businessCases" class="business-cases">
-            <!-- Business cases will be dynamically populated here -->
+        <h2>🏙️ Business Use Cases for Our City</h2>
+        <div class="use-cases">
+            <div class="case">
+                <h3>Electricity Generation</h3>
+                <p>Using river currents flowing throughout the city to generate electricity sustainably.</p>
+            </div>
+            <div class="case">
+                <h3>Transport</h3>
+                <p>An exclusive, private transport facility to help residents navigate within the city.</p>
+            </div>
+            <div class="case">
+                <h3>House Rentals</h3>
+                <p>A property management service providing insights on room availability for rent.</p>
+            </div>
+            <div class="case">
+                <h3>EV Charge Stations</h3>
+                <p>A private company setting up charging stations, including an application for their business.</p>
+            </div>
+            <div class="case">
+                <h3>Food Delivery Service</h3>
+                <p>An efficient service ensuring timely delivery of meals across the city.</p>
+            </div>
+            <div class="case">
+                <h3>Automobile Service Centers</h3>
+                <p>Centers offering repairs and maintenance for vehicles at convenient locations.</p>
+            </div>
+            <div class="case">
+                <h3>Homestay</h3>
+                <p>Providing homestay options for travelers, offering a local touch and comfortable stays.</p>
+            </div>
+            <div class="case">
+                <h3>Short-Term Rentals</h3>
+                <p>Short-term room rental services located in key parts of the city.</p>
+            </div>
         </div>
-    </section>
-
-    <section>
-        <h2>💡 Reflecting on City Design and Business Use Cases</h2>
-        <ul>
-            <li>We took inspiration from online resources for city design and refined ideas through discussion and trial and error.</li>
-            <li>For business use cases, we brainstormed and eliminated irrelevant ones, focusing on ideas that address the real needs of our city.</li>
-        </ul>
     </section>
 
     <section>
@@ -175,24 +241,41 @@
         <a href="code.html" class="link-button">Explore Algorithms</a>
     </section>
 
+    <section>
+        <h2>👨‍💻 Select a Team Member</h2>
+        <select id="teamMemberSelect">
+            <option value="">Select a team member...</option>
+            <option value="aditya">Aditya Patil</option>
+            <option value="pruthvi">Pruthvi R.</option>
+            <option value="sushant">Sushant Kulkarni</option>
+            <option value="prashanth">Prashanth Chiniwal</option>
+        </select>
+
+        <div id="businessCases" class="business-cases">
+            <!-- Business cases will be dynamically populated here -->
+        </div>
+    </section>
+
     <script>
-        document.getElementById('teamMemberSelect').addEventListener('change', function() {
-            const selectedMember = this.value;
-            const businessCasesDiv = document.getElementById('businessCases');
+        document.getElementById('teamMemberSelect').addEventListener('change', function () {
+            var selectedMember = this.value;
+            var businessCasesDiv = document.getElementById('businessCases');
             
             // Clear the current content
             businessCasesDiv.innerHTML = '';
 
-            const businessCases = {
-                aditya: ['Electricity Generation', 'Transport'],
-                pruthvi: ['House Rentals', 'Food Delivery Service'],
-                sushant: ['EV Charge Stations', 'Automobile Service Centers'],
-                prashanth: ['Homestay', 'Short-Term Rentals']
+            // Define business cases for each team member
+            var businessCases = {
+                aditya: ['Transport'],
+                pruthvi: ['Food Delivery Service'],
+                sushant: ['EV Charge Stations'],
+                prashanth: ['Traffic Management']
             };
 
+            // Display the selected member's business cases
             if (selectedMember) {
-                const cases = businessCases[selectedMember];
-                businessCasesDiv.innerHTML = `<h3>${selectedMember.charAt(0).toUpperCase() + selectedMember.slice(1)}'s Business Cases</h3><ul>${cases.map(caseItem => `<li>${caseItem}</li>`).join('')}</ul>`;
+                var cases = businessCases[selectedMember];
+                businessCasesDiv.innerHTML = `<h3>${selectedMember.charAt(0).toUpperCase() + selectedMember.slice(1)}'s Business Cases</h3><ul>${cases.map(caseItem => `<li><a href="${selectedMember}.html#${caseItem.replace(/\s+/g, '-').toLowerCase()}">${caseItem}</a></li>`).join('')}</ul>`;
                 businessCasesDiv.style.display = 'block';
             } else {
                 businessCasesDiv.style.display = 'none';
@@ -200,4 +283,5 @@
         });
     </script>
 </body>
+
 </html>
