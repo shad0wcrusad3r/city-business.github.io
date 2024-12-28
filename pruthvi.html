@@ -8,17 +8,18 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #4CAF50; /* Green background */
             margin: 0;
             padding: 0;
-            color: #333;
+            color: white;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #333;
         }
 
         header h1 {
@@ -36,6 +37,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
         }
 
         section h2,
@@ -94,6 +96,16 @@
 
         button:focus {
             outline: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
         @media (max-width: 768px) {
@@ -212,5 +224,6 @@
             <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp'">Open BFS Code</button>
         </p>
     </section>
+
 </body>
 </html>
