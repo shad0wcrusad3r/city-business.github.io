@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Rental Algorithms</title>
+    <title>House Rental Service Algorithms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="pruthvirentheet" href="pruthvirent.css">
 </head>
 <body>
@@ -12,27 +13,30 @@
         <p>Explore the algorithms and their use cases for optimizing house rental services.</p>
     </header>
 
-    <section class="content">
-        <!-- Prim's Algorithm Section -->
-        <section class="algorithm">
-            <h2>Why We Use Prim's Algorithm</h2>
-            <p><strong>Prim’s Algorithm</strong> is used to calculate the optimal property allocation for rental agents, ensuring:</p>
-            <ul>
-                <li>Efficient allocation of agents to properties.</li>
-                <li>Minimization of travel time for agents.</li>
-                <li>Cost-effective operations for managing rental properties.</li>
-            </ul>
-        </section>
+    <!-- House Rental Algorithms Section -->
+    <section>
+        <h2>Why We Use Prim's Algorithm</h2>
+        <p>
+            Prim’s Algorithm is used to calculate the optimal property allocation for rental agents, ensuring:
+        </p>
+        <ul>
+            <li>Efficient allocation of agents to properties.</li>
+            <li>Minimization of travel time for agents.</li>
+            <li>Cost-effective operations for managing rental properties.</li>
+        </ul>
+    </section>
 
-        <!-- Rental Property Network Section -->
-        <section class="algorithm">
-            <h2>Rental Property Network</h2>
-            <table>
+    <section>
+        <h2>Rental Property Network</h2>
+        <table>
+            <thead>
                 <tr>
                     <th>Nodes (Locations)</th>
                     <th>Edge (Road)</th>
                     <th>Weight (Time)</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>House A</td>
                     <td>House B</td>
@@ -68,36 +72,38 @@
                     <td>House D</td>
                     <td>10</td>
                 </tr>
-            </table>
-        </section>
+            </tbody>
+        </table>
+    </section>
 
-        <!-- Order Allocation Section -->
-        <section class="algorithm">
-            <h2>Order Allocation</h2>
-            <p><strong>Algorithm:</strong> Minimum Spanning Tree (Prim’s Algorithm)</p>
-            <p><strong>Use Case:</strong> Assigns rental agents to properties optimally, minimizing overlap and maximizing coverage.</p>
-            <p><strong>Code:</strong> <span class="code-link"><a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/prim.cpp">Prim's Code</a></span></p>
-        </section>
+    <section>
+        <h3>Order Allocation</h3>
+        <p>
+            <strong>Algorithm:</strong> Minimum Spanning Tree (Prim’s Algorithm)<br>
+            <strong>Use Case:</strong> Assigns rental agents to properties optimally, minimizing overlap and maximizing coverage.<br>
+            <strong>Code:</strong>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/prim.cpp'">Open Prim's Code</button>
+        </p>
 
-        <!-- Property Network Connectivity Section -->
-        <section class="algorithm">
-            <h2>Property Network Connectivity</h2>
-            <p><strong>Algorithm:</strong> Depth-First Search (DFS)</p>
-            <p><strong>Use Case:</strong> Analyzes the rental network to detect connected properties or unconnected components (bottlenecks).</p>
-            <p><strong>Code:</strong> <span class="code-link"><a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dfs.cpp">DFS Code</a></span></p>
-        </section>
+        <h3>Property Network Connectivity</h3>
+        <p>
+            <strong>Algorithm:</strong> Depth-First Search (DFS)<br>
+            <strong>Use Case:</strong> Analyzes the rental network to detect connected properties or unconnected components (bottlenecks).<br>
+            <strong>Code:</strong>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dfs.cpp'">Open DFS Code</button>
+        </p>
 
-        <!-- Cost Minimization Section -->
-        <section class="algorithm">
-            <h2>Cost Minimization</h2>
-            <p><strong>Algorithm:</strong> Bellman-Ford Algorithm</p>
-            <p><strong>Use Case:</strong> Determines the minimum travel cost from the rental office to each property, ensuring the cheapest routes for agents or tenants.</p>
-            <p><strong>Code:</strong> <span class="code-link"><a href="https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bellman-ford.cpp">Bellman-Ford Code</a></span></p>
-        </section>
+        <h3>Cost Minimization</h3>
+        <p>
+            <strong>Algorithm:</strong> Bellman-Ford Algorithm<br>
+            <strong>Use Case:</strong> Determines the minimum travel cost from the rental office to each property, ensuring the cheapest routes for agents or tenants.<br>
+            <strong>Code:</strong>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bellman_ford.cpp'">Open Bellman-Ford Code</button>
+        </p>
     </section>
 
     <footer>
-        <p>&copy; 2024 House Rental Services</p>
+        <p>© 2024 House Rental Services</p>
     </footer>
 </body>
 </html>
