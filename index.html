@@ -113,75 +113,117 @@
     </section>
 
     <section>
-        <h2>👨‍💻 Select a Team Member </h2>
-        <select id="teamMemberSelect">
-            <option value="">Select a team member...</option>
-            <option value="aditya">Aditya Patil</option>
-            <option value="pruthvi">Pruthvi R.</option>
-            <option value="sushant">Sushant Kulkarni</option>
-            <option value="prashanth">Prashanth Chiniwal</option>
-        </select>
+        <h2>👨‍💻 Click to Show Options</h2>
 
-        <div id="businessCases" class="business-cases">
-            <!-- Business cases will be dynamically populated here -->
+        <!-- Button for Pruthvi -->
+        <button id="pruthviButton">Pruthvi</button>
+        <div id="pruthviOptions" class="options" style="display: none;">
+            <button class="option-button" onclick="showBusinessCases('pruthviHouseRent')">House Rentals</button>
+            <button class="option-button" onclick="showBusinessCases('pruthviFoodDelivery')">Food Delivery Service</button>
+        </div>
+
+        <!-- Button for Aditya -->
+        <button id="adityaButton">Aditya</button>
+        <div id="adityaOptions" class="options" style="display: none;">
+            <button class="option-button" onclick="showBusinessCases('adityaElectricity')">Electricity Generation</button>
+            <button class="option-button" onclick="showBusinessCases('adityaTransport')">Public Transport</button>
+        </div>
+
+        <!-- Button for Sushant -->
+        <button id="sushantButton">Sushant</button>
+        <div id="sushantOptions" class="options" style="display: none;">
+            <button class="option-button" onclick="showBusinessCases('sushantEvStations')">EV Charge Stations</button>
+            <button class="option-button" onclick="showBusinessCases('sushantAutoService')">Automobile Service Centers</button>
+        </div>
+
+        <!-- Button for Prashanth -->
+        <button id="prashanthButton">Prashanth</button>
+        <div id="prashanthOptions" class="options" style="display: none;">
+            <button class="option-button" onclick="showBusinessCases('prashanthTraffic')">Traffic Management</button>
+        </div>
+
+        <!-- Business Cases will be displayed here -->
+        <div id="businessCases" class="business-cases" style="display: none;">
+            <!-- Content will be populated dynamically -->
         </div>
     </section>
 
     <script>
-        // Function to update the business cases based on selected member
-        function updateBusinessCases(selectedMember) {
+        // Function to show options when a team member button is clicked
+        document.getElementById('pruthviButton').addEventListener('click', function () {
+            document.getElementById('pruthviOptions').style.display = 'block';
+        });
+        document.getElementById('adityaButton').addEventListener('click', function () {
+            document.getElementById('adityaOptions').style.display = 'block';
+        });
+        document.getElementById('sushantButton').addEventListener('click', function () {
+            document.getElementById('sushantOptions').style.display = 'block';
+        });
+        document.getElementById('prashanthButton').addEventListener('click', function () {
+            document.getElementById('prashanthOptions').style.display = 'block';
+        });
+
+        // Function to display business cases based on the selected option
+        function showBusinessCases(option) {
             var businessCasesDiv = document.getElementById('businessCases');
             
-            // Clear current content
+            // Clear any previous content
             businessCasesDiv.innerHTML = '';
 
-            if (selectedMember === 'aditya') {
+            if (option === 'pruthviHouseRent') {
                 businessCasesDiv.innerHTML = `
-                    <h3>Aditya's Business Cases</h3>
-                    <ul>
-                        <li><a href="aditya.html#electricity-generation">Electricity Generation</a></li>
-                        <li><a href="aditya.html#public-transport">Public Transport</a></li>
-                    </ul>
-                `;
-            } else if (selectedMember === 'pruthvi') {
-                businessCasesDiv.innerHTML = `
-                    <h3>Pruthvi's Business Cases</h3>
+                    <h3>Pruthvi's Business Case: House Rentals</h3>
                     <ul>
                         <li><a href="pruthvirent.html#house-rentals">House Rentals</a></li>
+                    </ul>
+                `;
+            } else if (option === 'pruthviFoodDelivery') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Pruthvi's Business Case: Food Delivery</h3>
+                    <ul>
                         <li><a href="pruthvi.html#food-delivery">Food Delivery Service</a></li>
                     </ul>
                 `;
-            } else if (selectedMember === 'sushant') {
+            } else if (option === 'adityaElectricity') {
                 businessCasesDiv.innerHTML = `
-                    <h3>Sushant's Business Cases</h3>
+                    <h3>Aditya's Business Case: Electricity Generation</h3>
+                    <ul>
+                        <li><a href="aditya.html#electricity-generation">Electricity Generation</a></li>
+                    </ul>
+                `;
+            } else if (option === 'adityaTransport') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Aditya's Business Case: Public Transport</h3>
+                    <ul>
+                        <li><a href="aditya.html#public-transport">Public Transport</a></li>
+                    </ul>
+                `;
+            } else if (option === 'sushantEvStations') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Sushant's Business Case: EV Charge Stations</h3>
                     <ul>
                         <li><a href="sushant.html#ev-charge-stations">EV Charge Stations</a></li>
+                    </ul>
+                `;
+            } else if (option === 'sushantAutoService') {
+                businessCasesDiv.innerHTML = `
+                    <h3>Sushant's Business Case: Automobile Service Centers</h3>
+                    <ul>
                         <li><a href="sushant.html#automobile-service">Automobile Service Centers</a></li>
                     </ul>
                 `;
-            } else if (selectedMember === 'prashanth') {
+            } else if (option === 'prashanthTraffic') {
                 businessCasesDiv.innerHTML = `
-                    <h3>Prashanth's Business Cases</h3>
+                    <h3>Prashanth's Business Case: Traffic Management</h3>
                     <ul>
                         <li><a href="prashanth.html#traffic">Traffic Management</a></li>
                     </ul>
                 `;
             }
 
-            // Show or hide the business cases section based on the selection
-            businessCasesDiv.style.display = selectedMember ? 'block' : 'none';
+            // Show the business cases section
+            businessCasesDiv.style.display = 'block';
         }
-
-        // Event listener for dropdown change
-        document.getElementById('teamMemberSelect').addEventListener('change', function () {
-            updateBusinessCases(this.value);
-        });
-
-        // Reset when navigating back
-        window.addEventListener('popstate', function () {
-            document.getElementById('teamMemberSelect').selectedIndex = 0;
-            updateBusinessCases('');
-        });
     </script>
 
 </body>
