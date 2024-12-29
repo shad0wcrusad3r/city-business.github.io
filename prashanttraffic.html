@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms for Optimization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #blue;
+            color: white;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: black;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .code-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .code-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Optimization Algorithms</h1>
+
+    <div class="section">
+        <h2>House Rental Algorithms</h2>
+
+        <h3>Why We Use Prim's Algorithm</h3>
+        <ul>
+            <li>Efficient allocation of agents to properties.</li>
+            <li>Minimization of travel time for agents.</li>
+            <li>Cost-effective operations for managing rental properties.</li>
+        </ul>
+
+        <h3>Rental Property Network</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Road)</th>
+                    <th>Weight (Time)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>House A</td>
+                    <td>House B</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>House A</td>
+                    <td>Park</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>House B</td>
+                    <td>House C</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>House C</td>
+                    <td>School</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Park</td>
+                    <td>School</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>Office</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Office</td>
+                    <td>House D</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Order Allocation</h3>
+        <p><strong>Algorithm:</strong> Minimum Spanning Tree (Prim’s Algorithm)</p>
+        <p><strong>Use Case:</strong> Assigns rental agents to properties optimally, minimizing overlap and maximizing coverage.</p>
+        <p><a href="#" class="code-link">Open Prim's Code</a></p>
+
+        <h3>Property Network Connectivity</h3>
+        <p><strong>Algorithm:</strong> Depth-First Search (DFS)</p>
+        <p><strong>Use Case:</strong> Analyzes the rental network to detect connected properties or unconnected components (bottlenecks).</p>
+        <p><a href="#" class="code-link">Open DFS Code</a></p>
+
+        <h3>Cost Minimization</h3>
+        <p><strong>Algorithm:</strong> Bellman-Ford Algorithm</p>
+        <p><strong>Use Case:</strong> Determines the minimum travel cost from the rental office to each property, ensuring the cheapest routes for agents or tenants.</p>
+        <p><a href="#" class="code-link">Open Bellman-Ford Code</a></p>
+    </div>
+
+    <div class="section">
+        <h2>Traffic Management Algorithms</h2>
+
+        <h3>Why We Use Dijkstra's Algorithm</h3>
+        <ul>
+            <li>Efficient routing of vehicles to minimize travel time.</li>
+            <li>Dynamic traffic management by identifying bottlenecks.</li>
+            <li>Improved urban planning with optimized routes and reduced congestion.</li>
+        </ul>
+
+        <h3>Traffic Network Example</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Road)</th>
+                    <th>Weight (Time)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Intersection A</td>
+                    <td>Intersection B</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Intersection A</td>
+                    <td>Park</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Intersection B</td>
+                    <td>Intersection C</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Intersection C</td>
+                    <td>School</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Park</td>
+                    <td>School</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>Office</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Office</td>
+                    <td>Intersection D</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Traffic Flow Optimization</h3>
+        <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
+        <p><strong>Use Case:</strong> Finds the shortest paths for vehicles, reducing travel time and ensuring optimal flow of traffic.</p>
+        <p><a href="#" class="code-link">Open Dijkstra's Code</a></p>
+
+        <h3>Traffic Congestion Analysis</h3>
+        <p><strong>Algorithm:</strong> Breadth-First Search (BFS)</p>
+        <p><strong>Use Case:</strong> Analyzes the road network to detect bottlenecks and traffic jams, ensuring smooth connectivity and efficient rerouting.</p>
+        <p><a href="#" class="code-link">Open BFS Code</a></p>
+
+        <h3>Cost Minimization for Traffic Lights</h3>
+        <p><strong>Algorithm:</strong> Bellman-Ford Algorithm</p>
+        <p><strong>Use Case:</strong> Determines the optimal timing of traffic lights at intersections, minimizing delays and ensuring smoother traffic flow.</p>
+        <p><a href="#" class="code-link">Open Bellman-Ford Code</a></p>
+    </div>
+</body>
+</html>
