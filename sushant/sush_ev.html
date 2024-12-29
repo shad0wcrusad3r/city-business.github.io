@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case 1: EV Charging Stations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sush_ev.css">
+</head>
+<body>
+    <header>
+        <h1>Business Case 1: EV Charging Stations</h1>
+    </header>
+
+    <section>
+        <h2>Subtask 1: Floyd Algorithm for Home-Station Shortest Paths</h2>
+        <h3>SDG:</h3>
+        <ul>
+            <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
+            <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+        </ul>
+        <h3>Target:</h3>
+        <ul>
+            <li><strong>SDG 9.1:</strong> Develop quality, reliable, sustainable, and resilient infrastructure to support economic development and human well-being.</li>
+            <li><strong>SDG 11.2:</strong> Provide access to safe, affordable, accessible, and sustainable transport systems for all.</li>
+        </ul>
+        <h3>Indicator:</h3>
+        <ul>
+            <li><strong>9.1.2:</strong> Proportion of the rural population who live within 2 km of an all-season road (interpreted here as proximity to EV charging stations).</li>
+            <li><strong>11.2.1:</strong> Proportion of population that has convenient access to public transport (adapted to EV stations in this context).</li>
+        </ul>
+
+        <p>The shortest paths from all user homes to stations in a city are represented below:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Place 1</th>
+                    <th>Place 2</th>
+                    <th>Distance (Cost)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Station 1</td><td>House 1</td><td>12</td></tr>
+                <tr><td>Station 1</td><td>Station 2</td><td>5</td></tr>
+                <tr><td>Station 1</td><td>House 2</td><td>15</td></tr>
+                <tr><td>Station 1</td><td>Station 3</td><td>7</td></tr>
+                <tr><td>Station 2</td><td>House 3</td><td>30</td></tr>
+                <tr><td>Station 3</td><td>House 3</td><td>25</td></tr>
+                <tr><td>Station 2</td><td>House 2</td><td>3</td></tr>
+                <tr><td>House 1</td><td>House 2</td><td>4</td></tr>
+                <tr><td>House 1</td><td>Station 3</td><td>6</td></tr>
+            </tbody>
+        </table>
+
+        <p>Nodes 1, 3, and 5 are homes (House 1, House 2, House 3), and Nodes 0, 2, and 4 are stations (Station 1, Station 2, Station 3).</p>
+        <figure>
+            <img src="t1_graph.drawio.png" alt="Map for home to stations" style="width: 100%;">
+            <figcaption>Map for home to stations</figcaption>
+        </figure>
+        <p>An optimal shortest path from each home to station using Floyd's algorithm. The data
+            generated can be found in the file <a href="graph_input.txt">HERE</a>, and the code is available <a href="t1.cpp">HERE</a>. The code is implemented using STL containers, a 2D vector for graph input and 2 sets to contain homes and stations. The code has cubic efficiency and the algorithm uses the dynamic programming technique. This case made me realize on
+            how Floyd's algorithm can be used in real time scenarios.
+            </p>
+    </section>
+
+    <section>
+        <h2>Subtask 2: Merge Sort for Waiting Time and Pruning Coffee-less Stations</h2>
+        <h3>SDG:</h3>
+        <ul>
+            <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
+            <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
+        </ul>
+        <h3>Target:</h3>
+        <ul>
+            <li><strong>SDG 7.2:</strong> Increase the share of renewable energy in the global energy mix.</li>
+            <li><strong>SDG 12.3:</strong> Halve per capita global food waste at the retail and consumer levels.</li>
+        </ul>
+        <h3>Indicator:</h3>
+        <ul>
+            <li><strong>7.2.1:</strong> Renewable energy share in the total final energy consumption (applies to charging stations powered by renewable energy).</li>
+            <li><strong>12.3.1:</strong> Global food loss index (adapted to track services like coffee availability and consumption).</li>
+        </ul>
+
+        <p>Stations are analyzed for waiting times and coffee availability as follows:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Station ID</th>
+                    <th>Waiting Time (minutes)</th>
+                    <th>Coffee Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>40</td><td>No</td></tr>
+                <tr><td>2</td><td>75</td><td>Yes</td></tr>
+                <tr><td>3</td><td>50</td><td>Yes</td></tr>
+                <tr><td>4</td><td>25</td><td>No</td></tr>
+                <tr><td>5</td><td>10</td><td>No</td></tr>
+                <tr><td>6</td><td>65</td><td>Yes</td></tr>
+                <tr><td>7</td><td>20</td><td>Yes</td></tr>
+            </tbody>
+        </table>
+
+        <p>A sorted list is generated using Merge sort algorithm. The data used in code can be found in the file <a href="charging_stations.txt">HERE</a>, and the code can be viewed <a href="t2.cpp">HERE</a>. The code is implemented using doubly linked lists, called lists from STL. The code has O(nlogn) efficiency and the algorithm uses the divide-and-conquer technique. This case lead me to understand
+            how Merge sort algorithm can be used in real time scenarios.
+            </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,5 @@
+WipingWindshield 50
+OilChange 100
+TireRotation 30
+BatteryCheck 20
+BrakeInspection 70

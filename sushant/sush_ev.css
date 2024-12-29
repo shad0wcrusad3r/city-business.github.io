@@ -1,0 +1,134 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 0;
+    color: #2e7d32;
+}
+
+header {
+    background-color: #388E3C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #2e7d32;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2e7d32;
+    border-bottom: 2px solid #81c784;
+    padding-bottom: 5px;
+}
+
+section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #43a047;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4e342e;
+}
+
+section strong {
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #bdbdbd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #c8e6c9;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+pre {
+    background-color: #f9fbe7;
+    border: 1px solid #c5e1a5;
+    border-radius: 8px;
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+}
+
+a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #4caf50;
+}
+
+img[src="t1_graph.drawio.png"] {
+    max-width: 400px; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    section h3 {
+        font-size: 18px;
+    }
+}

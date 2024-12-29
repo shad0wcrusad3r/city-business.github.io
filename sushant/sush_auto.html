@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case 2: Automobile Service Centres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sush_auto.css">
+</head>
+<body>
+    <header>
+        <h1>Business Case 2: Automobile Service Centres</h1>
+    </header>
+
+    <section>
+        <h2>Subtask: Dijkstra Algorithm for Shortest Path and</h2>
+        <h2>Heap Sort Algorithm for Service Sorting</h2>
+        <h3>SDG:</h3>
+        <ul>
+            <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
+            <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+            <li><strong>SDG 8:</strong> Decent Work and Economic Growth</li>
+        </ul>
+        <h3>Target:</h3>
+        <ul>
+            <li><strong>SDG 9.1:</strong> Develop quality, reliable, sustainable, and resilient infrastructure to support economic development and human well-being.</li>
+            <li><strong>SDG 11.2:</strong> Provide access to safe, affordable, accessible, and sustainable transport systems for all.</li>
+            <li><strong>SDG 8.2:</strong> Achieve higher levels of economic productivity through diversification, technological upgrading, and innovation.</li>
+        </ul>
+        <h3>Indicator:</h3>
+        <ul>
+            <li><strong>9.1.2:</strong> Proportion of the rural population who live within 2 km of an all-season road (interpreted here as proximity to automobile service centres).</li>
+            <li><strong>11.2.1:</strong> Proportion of population that has convenient access to public transport (adapted to ease of access to automobile service centres).</li>
+            <li><strong>8.2.1:</strong> Annual growth rate of real GDP per employed person (linked to operational efficiency gained through sorting services offered by the centre).</li>
+        </ul>
+
+        <p>The shortest paths from home to service centres are represented below:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Distance (Cost)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Home</td><td>Landmark 1</td><td>10</td></tr>
+                <tr><td>Landmark 1</td><td>Landmark 2</td><td>5</td></tr>
+                <tr><td>Landmark 1</td><td>Landmark 3</td><td>2</td></tr>
+                <tr><td>Landmark 2</td><td>Landmark 3</td><td>1</td></tr>
+                <tr><td>Landmark 3</td><td>Service Centre</td><td>3</td></tr>
+                <tr><td>Home</td><td>Landmark 2</td><td>15</td></tr>
+            </tbody>
+        </table>
+        
+
+        <figure>
+            <img src="t4_path.png" alt="Map of home and centre in city" style="width: 100%;">
+            <figcaption>Map of home and centre in city</figcaption>
+        </figure>
+
+        <p>An optimal shortest path from home to centre using Dijkstra's algorithm. The data generated for city map for home and centre can be found in the file <a href="path.txt">HERE</a>, and for the service to cost data <a href="service.txt">HERE</a>. The Dijkstra's code and the Heap Sort code can be viewed <a href="t4.cpp">HERE</a>. The code uses STL containers, a 2D vector for graph input, and a priority queue for Dijkstra’s algorithm. Heap sort uses a vector of pairs to store service-cost data. Dijkstra's algorithm is implemented with O(E log V) complexity, and Heap Sort has O(n log n) complexity. This case highlights how these algorithms can be applied in real-time scenarios.</p>
+    </section>
+</body>
+</html>
