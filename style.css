@@ -9,24 +9,29 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #e8f5e9; /* Light green background */
+    color: #333;
     padding: 20px;
-    background-color: #f4f4f4;
+    min-height: 100vh;
 }
 
 /* Header Styling */
 header {
     text-align: center;
     margin-bottom: 40px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 20px 0;
+    border-radius: 8px;
 }
 
 h1 {
     font-size: 2.5em;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 1.2em;
-    color: #555;
 }
 
 /* Section Styling */
@@ -34,13 +39,14 @@ section {
     margin-bottom: 40px;
 }
 
+/* Section Titles */
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Team Introduction */
+/* Course and Team Introduction */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -51,7 +57,7 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Use Cases */
+/* Use Cases Section */
 .use-cases {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -64,6 +70,7 @@ ul li {
     border-radius: 8px;
     padding: 15px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .case h3 {
@@ -76,7 +83,7 @@ ul li {
     color: #555;
 }
 
-/* Navigation Links */
+/* Links */
 a {
     color: #4CAF50;
     text-decoration: none;
@@ -102,6 +109,7 @@ a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .link-button:hover {
@@ -142,4 +150,15 @@ a:hover {
 
 .business-cases ul li a:hover {
     text-decoration: underline;
+}
+
+/* Footer (Optional) */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
