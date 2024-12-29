@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Public Transport Stop Allocation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2,
+        section h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        section strong {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section h2,
+            section h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            section h2,
+            section h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Optimized Public Transport Stop Allocation</h1>
+        <p>Explore the algorithms and their use cases for optimizing public transport stop allocation.</p>
+    </header>
+
+    <section>
+        <h2>Why We Use Dijkstra's Algorithm</h2>
+        <p>
+            Dijkstra's Algorithm is used to calculate the shortest path to the nearest public transport stop from a commuter's location, ensuring:
+        </p>
+        <ul>
+            <li>Improved convenience for commuters.</li>
+            <li>Reduced overall travel time.</li>
+            <li>Encouraged adoption of public transportation systems.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Public Transport Network</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Path)</th>
+                    <th>Weight (Time/Distance)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Residential Area 1</td>
+                    <td>Workplace 1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Residential Area 1</td>
+                    <td>Public Transport Stop 1</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Workplace 1</td>
+                    <td>Public Transport Stop 2</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Residential Area 2</td>
+                    <td>Workplace 2</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Workplace 2</td>
+                    <td>Public Transport Stop 3</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Public Transport Stop 3</td>
+                    <td>Public Transport Stop 4</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Workplace 2</td>
+                    <td>Public Transport Stop 4</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Route Optimization</h3>
+        <p>
+            <strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
+            <strong>Use Case:</strong> Determines the fastest route for commuters to travel to the nearest public transport stop.<br>
+            <strong>Code:</strong>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijkstra.cpp'">Open Dijkstra's Code</button>
+        </p>
+
+        <h3>Network Construction</h3>
+        <p>
+            <strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
+            <strong>Use Case:</strong> Constructs the most efficient network of paths, connecting all nodes with minimal distance.<br>
+            <strong>Code:</strong>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp'">Open Kruskal's Code</button>
+        </p>
+
+           </section>
+</body>
+</html>
