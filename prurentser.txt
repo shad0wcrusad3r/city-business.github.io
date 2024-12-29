@@ -1,1 +1,5 @@
-
+Property Cleaning	50
+Appliance Maintenance (e.g., HVAC, water heater)	100
+Pest Control (Ensuring pest-free environment)	30
+Plumbing Inspection (Checking for leaks or blockages)	20
+Security System Check (Ensuring home security)	70
