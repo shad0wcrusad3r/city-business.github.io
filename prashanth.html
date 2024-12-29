@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Response Systems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: white; /* White background for the page */
+            color: black; /* Black text color for better readability */
+        }
+        h1, h2 {
+            color: #ffffff; /* White color for headings */
+        }
+        .header-section {
+            background-color: blue; /* Blue background for the header section */
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: black;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .code-link {
+            color: white;
+            background-color: blue; /* Blue button color */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .code-link:hover {
+            background-color: #004080; /* Slightly darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <h1>Emergency Response Systems</h1>
+    </div>
+
+    <div class="section">
+        <h2>Routing Algorithms in Emergency Situations</h2>
+
+        <h3>Why We Use A* Algorithm</h3>
+        <ul>
+            <li>Optimizes the shortest path from emergency sources to destinations during crises.</li>
+            <li>Helps in quick response by reducing travel time and ensuring timely arrival.</li>
+            <li>Enhances coordination among emergency services for better resource allocation.</li>
+        </ul>
+
+        <h3>Emergency Network Example</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nodes (Locations)</th>
+                    <th>Edge (Path)</th>
+                    <th>Weight (Time)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fire Station</td>
+                    <td>Hospital</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Fire Station</td>
+                    <td>Police Station</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Hospital</td>
+                    <td>Emergency Shelter</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Police Station</td>
+                    <td>Emergency Shelter</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Emergency Shelter</td>
+                    <td>Incident Command Center</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Optimal Routing for Emergency Response</h3>
+        <p><strong>Algorithm:</strong> A* Algorithm</p>
+        <p><strong>Use Case:</strong> Finds the shortest and most efficient paths for emergency services, ensuring timely response during critical situations.</p>
+        <p><a href="astar.cpp" class="code-link">Open A* Code</a></p> <!-- Example code link for A* Algorithm -->
+
+        <h3>Resource Allocation in Emergency Situations</h3>
+        <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
+        <p><strong>Use Case:</strong> Helps in identifying optimal routes and resources to allocate during emergencies, ensuring effective response strategies.</p>
+        <p><a href="dijkstra-emergency.cpp" class="code-link">Open Dijkstra's Emergency Code</a></p> <!-- Example code link for Dijkstra -->
+
+        <h3>Real-Time Emergency Monitoring</h3>
+        <p><strong>Algorithm:</strong> Breadth-First Search (BFS)</p>
+        <p><strong>Use Case:</strong> Analyzes road networks and emergency response systems to detect bottlenecks and optimize resource distribution.</p>
+        <p><a href="bfs-emergency.cpp" class="code-link">Open BFS Code for Emergency</a></p> <!-- Example code link for BFS -->
+    </div>
+</body>
+</html>
