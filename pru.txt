@@ -1,1 +1,9 @@
-11
+10 
+10 15
+10 15 15 
+10 15 15 17
+10 15 15 17    37
+10 15 15 17 47 37
+
+
+Note: remaning entries are considered as infinity
