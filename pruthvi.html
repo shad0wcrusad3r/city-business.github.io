@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #4CAF50; /* Green background */
+            background-color: #4CAF50;
             margin: 0;
             padding: 0;
             color: white;
@@ -33,27 +33,21 @@
 
         section {
             padding: 20px;
-            margin: 20px 0;
+            margin: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: #333;
         }
 
-        section h2,
-        section h3 {
+        section h2, section h3 {
             font-size: 28px;
             margin-bottom: 10px;
-            color: #333;
         }
 
         section p {
             font-size: 16px;
             line-height: 1.6;
-        }
-
-        section strong {
-            font-weight: bold;
         }
 
         table {
@@ -104,34 +98,6 @@
             background-color: #3e8e41;
         }
 
-        button:focus {
-            outline: none;
-        }
-
-        .go-back-btn {
-            background-color: #4CAF50; /* Green background for the Return button */
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
-            text-align: center;
-            display: block;
-            width: 200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .go-back-btn:hover {
-            background-color: #45a049;
-        }
-
-        .go-back-btn:active {
-            background-color: #3e8e41;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -140,28 +106,6 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            section h2,
-            section h3 {
-                font-size: 24px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 22px;
-            }
-
-            section h2,
-            section h3 {
-                font-size: 20px;
-            }
         }
     </style>
 </head>
@@ -209,26 +153,6 @@
                     <td>Park</td>
                     <td>5</td>
                 </tr>
-                <tr>
-                    <td>House 2</td>
-                    <td>School</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>Park</td>
-                    <td>School</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>School</td>
-                    <td>Office</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Office</td>
-                    <td>House 3</td>
-                    <td>10</td>
-                </tr>
             </tbody>
         </table>
         <img src="WhatsApp Image 2024-12-29 at 17.30.20_d16b7a07.jpg" alt="Delivery Route Network Diagram">
@@ -237,30 +161,68 @@
     <section>
         <h3>Route Optimization</h3>
         <p>
-            <strong>Algorithm:</strong> Shortest Path Algorithm (Dijkstra’s Algorithm)<br>
-            <strong>Use Case:</strong> Determines the fastest route for delivery agents to travel from restaurants to customers.<br>
+            <strong>Algorithm:</strong> Dijkstra’s Algorithm<br>
+            <strong>Use Case:</strong> Optimizing delivery routes.<br>
             <strong>Code:</strong>
-            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp'">Open Dijkstra's Code</button>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/dijk.cpp'">View Code</button>
         </p>
 
         <h3>Order Allocation</h3>
         <p>
-            <strong>Algorithm:</strong> Minimum Spanning Tree (Kruskal’s Algorithm)<br>
-            <strong>Use Case:</strong> Assigns delivery orders to agents optimally, minimizing overlap in routes.<br>
+            <strong>Algorithm:</strong> Kruskal's Algorithm<br>
+            <strong>Use Case:</strong> Assigning delivery orders to minimize overlapping routes.<br>
             <strong>Code:</strong>
-            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp'">Open Kruskal's Code</button>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/kruskal.cpp'">View Code</button>
         </p>
 
-        <h3>Delivery Route Bottleneck Detection</h3>
+        <h3>Bottleneck Detection</h3>
         <p>
             <strong>Algorithm:</strong> Breadth-First Search (BFS)<br>
-            <strong>Use Case:</strong> Analyzes delivery route networks to detect bottlenecks or unconnected components.<br>
+            <strong>Use Case:</strong> Identifying bottlenecks or unconnected delivery routes.<br>
             <strong>Code:</strong>
-            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp'">Open BFS Code</button>
+            <button onclick="window.location.href='https://github.com/shad0wcrusad3r/city-business.github.io/blob/main/bfs.cpp'">View Code</button>
         </p>
-        
-        <!-- New "Return to Old Page" Button -->
-        <button class="go-back-btn" onclick="window.history.back()">Return to Old Page</button>
     </section>
+<section>
+    <h2>Sustainable Development Goals (SDGs) Alignment</h2>
+    <p>
+        Implementing efficient algorithms in food delivery systems can support the following SDG goals, targets, and indicators:
+    </p>
+
+    <h3>SDG Goal 11: Sustainable Cities and Communities</h3>
+    <ul>
+        <li>
+            <strong>Target 11.2:</strong> Provide access to safe, affordable, and sustainable transport systems for all.
+        </li>
+        <li>
+            <strong>Indicator 11.2.1:</strong> Proportion of population that has convenient access to public transport, by sex, age, and persons with disabilities.
+        </li>
+    </ul>
+
+    <h3>SDG Goal 13: Climate Action</h3>
+    <ul>
+        <li>
+            <strong>Target 13.2:</strong> Integrate climate change measures into national policies, strategies, and planning.
+        </li>
+        <li>
+            <strong>Indicator 13.2.1:</strong> Number of countries with nationally determined contributions, long-term strategies, and adaptation plans.
+        </li>
+    </ul>
+
+    <h3>SDG Goal 12: Responsible Consumption and Production</h3>
+    <ul>
+        <li>
+            <strong>Target 12.3:</strong> Halve global food waste at the retail and consumer levels and reduce food losses along production and supply chains.
+        </li>
+        <li>
+            <strong>Indicator 12.3.1:</strong> Food loss index and food waste index.
+        </li>
+    </ul>
+
+    <p>
+        By optimizing delivery routes using Dijkstra’s Algorithm, food delivery businesses can reduce operational costs and carbon footprints while contributing to global sustainability efforts.
+    </p>
+</section>
+
 </body>
 </html>
